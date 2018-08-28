@@ -1,0 +1,43 @@
+*{margin: 0;}
+li{
+	list-style: none;
+	text-align: center;
+	float: left;
+	width: 33.33%;
+	height: 50px;
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+}
+a{
+	font: 12px/1.5 "Microsoft Yahei","微软雅黑",verdana;
+	text-align: center;
+	color:#999;
+	text-decoration: none;
+}
+a:hover{
+	color: limegreen;
+	font-size: 18px;
+}
+b{
+	margin: 0 10px;
+}
+.hr{clear:both;height: 1px;margin-bottom: 27px;background-color: #4f4f4f;border: 0;}
+.outer{
+	background-color: #414141;;
+	height: 167px;
+	padding-top: 38px;
+}
+.split{font-size: 12px; color: #999;}
+.row{
+	width: 1090px;
+	margin: 0 auto;
+}
+.nav{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+p{
+	text-align: center;
+}

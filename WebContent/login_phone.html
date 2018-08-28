@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>手机登陆</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        html { height: 100%; }
+        body { height: 100%; background: #fff url(images/backgroud.png) 50% 50% no-repeat; background-size: cover;}
+        .dowebok { position: absolute; left: 50%; top: 50%; width: 430px; height: auto; margin: -300px 0 0 -215px; border: 1px solid #fff; border-radius: 20px; overflow: hidden;}
+        .logo { width: 104px; height: 104px; margin: 50px auto 80px; background: url(images/login.png) 0 0 no-repeat; }
+        .form-item { position: relative; width: 360px; margin: 0 auto; padding-bottom: 30px;}
+        .form-item input { width: 288px; height: 48px; padding-left: 70px; border: 1px solid #fff; border-radius: 25px; font-size: 18px; color: #fff; background-color: transparent; outline: none;}
+        .form-item button { width: 360px; height: 50px; border: 0; border-radius: 25px; font-size: 18px; color: #1f6f4a; outline: none; cursor: pointer; background-color: #fff; }
+        .tip { display: none; position: absolute; left: 20px; top: 52px; font-size: 14px; color: #f50; }
+        .reg-bar { width: 360px; margin: 20px auto 0; font-size: 14px; overflow: hidden;}
+        .reg-bar a { color: #fff; text-decoration: none; }
+        .reg-bar a:hover { text-decoration: underline; }
+        .reg-bar .reg { float: left; }
+        .reg-bar .admin{float: left;margin-left: 20px;}
+        .reg-bar .forget { float: right; }
+        .reg-bar .phone{float:left;margin-left: 10px;}
+        .dowebok ::-webkit-input-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+        .dowebok :-moz-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+        .dowebok ::-moz-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+        .dowebok :-ms-input-placeholder { font-size: 18px; line-height: 1.4; color: #fff;}
+		.admin{}
+		.back{text-decoration: none;margin-bottom: 10px;float: right;font-size: 18px;margin-right: 20px;
+				line-height: 50px;height: 50px;background-image: url(images/back.png);background-repeat: no-repeat;
+				width: 185px;text-align:right;background-position-y:7px;}
+		.back a{text-decoration: none;color: white;}
+		#img_box{float:right;}
+		#verpic {width:100%;height: 100%;}
+		#pic{width:145px;}
+        @media screen and (max-width: 500px) {
+            * { box-sizing: border-box; }
+            .dowebok { position: static; width: auto; height: auto; margin: 0 30px; border: 0; border-radius: 0; }
+            .logo { margin: 50px auto; }
+            .form-item { width: auto; }
+            .form-item input, .form-item button, .reg-bar { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+	<div class="dowebok">
+    	<form id="login_phone_form">
+        <div class="logo"></div>
+        <div class="form-item">
+            <input id="email" name="phoneNumber" type="text" autocomplete="off" placeholder="手机号">
+            <p class="tip" id="tip1">请输入合法的手机号</p>
+        </div>
+	</form>
+	<form id="getVer">
+	<div class="form-item">
+		<input type="text" id="pic" placeholder="验证码"/>
+		<div id="img_box"><img id="verpic" src=""></div>
+	</div>
+	</form>
+	<div class="form-item"><button id="get_phone">获取手机验证码</button></div>
+	
+		<div class="form-item">
+		<div class="form-item">
+			<input type="text" id="tjphone" placeholder="请输入手机验证码,6位数字"/>	
+		</div>
+		<button id="tj">登陆</button>
+		</div>
+		
+		<div class="back" ><a href="login.html">点此返回登录页面</a></div>
+		
+	</div>
+	
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script>
+	var key1=null;
+	var backcode1=null;
+    var yzcode=null;
+	$(document).ready(function(){ 
+		$.ajax({
+			url:'gerVer',
+			type:'get',
+			async:'true',
+			dataType:'json',
+			contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+			success:function(data){
+				var obj=data;
+				yzcode=obj.code;
+				$("#verpic").attr("src",obj.path);
+			},
+			error:function(){
+				alert("error");
+			}
+			});
+	});
+	
+	$(function(){
+		$("#verpic").click(function() {
+			var phone=$("#email").val();
+			if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(phone))){
+				$("#tip1").show();
+				return false;
+			}
+			
+			$.ajax({
+				url:'gerVer',
+				type:'get',
+				async:'true',
+				dataType:'json',
+				contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+				success:function(data){
+					var obj=data;
+					yzcode=obj.code;
+					$("#verpic").attr("src",obj.path);
+				},
+				error:function(){
+					alert("error");
+				}
+		});
+	});
+		
+		$("#get_phone").click(function() {
+			var Ver=$("#pic").val();
+			if(Ver==null || Ver==" "){
+				alert("验证码不能为空");
+				return false;
+			}
+			//点击获取手机验证码按钮验证 图片验证码是否正确
+			
+			if(Ver===yzcode){
+				alert("验证码正确");
+			}else{
+				alert("验证码不正确");
+				return false;
+			};
+			//点击获取手机验证码按钮 发起ajax请求 给指定手机发送6位验证码
+			$.ajax({
+				url:'gerVer',
+				type:'post',
+				data:$("#login_phone_form").serialize(),
+				async:'true',
+				dataType:'json',
+				contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+				success:function(data){
+					var obj=data;
+					key1=obj.key;
+					backcode1=obj.backcode;
+				//	alert(obj.key);
+				//	alert(obj.backcode);
+					if(backcode1=="00000"){
+						alert("短信发送成功");
+					}else if(backcode1=="00001"){
+						alert("服务器发生了的错误");
+					}else if(backcode1=="00007"){
+						alert("重复提交数据");
+					}else if(backcode1=="00025"){
+						alert("手机格式不对");
+					}else if(backcode1=="00141"){
+						alert("一小时内接收验证码超过限制");
+					}else if(backcode1=="00142"){
+						alert("一天接收验证码超过限制");
+					}else{
+						alert("未知的错误");
+					}
+
+				},
+				error:function(){
+					alert("error");
+				}
+		});
+			
+		});
+		//验证用户输入的验证码 是否和接收后台穿过来的一致
+		$("#tj").click(function(){
+			var userKey=document.getElementById("tjphone").value;
+			alert(key1);
+			alert(userKey);
+			if(userKey==key1){
+				alert("登陆成功");
+			}
+		});
+		
+});
+</script>
+
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/index.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script type="text/javascript" src="js/slider.js" ></script>
+		<meta charset="UTF-8">
+		<title>leaf装饰</title>
+	</head>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="iframe/css/head.css" />
+	<link rel="stylesheet" href="iframe/css/navigation.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<body style="overflow:scroll;">
+		<header>
+			<nav>
+				<div class="nav-l">
+					<div style="margin-left:0;">
+						<div>
+							<a href="index.html" target="_blank">美丽家-魅力家-叶之家具</a>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div>
+								<ul>
+									<li>
+										<a href="F" target="_blank">七夕系列饰品上线特惠</a>
+									</li>
+									<!--<li>
+										<a href="" target="_blank">【严选x中行联名卡】达标领80元礼品卡&gt;</a>
+									</li>
+									<li>
+										<a href="" target="_blank">【福利】下载严选APP，抢1元包邮团，领...</a>
+									</li>
+									<li>
+										<a  href="" target="_blank">七夕系列饰品上线特惠</a>
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-r">
+					<div>
+						<div id="nar_lr" style="display: block;">
+							<div class="navr-lr">
+								<div>
+									<div id="login" class="" onclick="window.location='login.html'" title="leaf登录">登录</div>
+								</div>
+							</div>
+							<div class="navr-lr" style="margin-left:20px;">
+								<div >
+									<div onclick="window.location='regin.html'">注册</div>
+								</div>
+							</div>
+						</div>
+						<div id="user" style="display: none;">
+							<div onmouseout="yc()" onmouseover="xs()">
+								<a><div id="user_name" style="text-align: center;overflow: hidden;"></div></a>
+							</div>
+							<div id="service" onmouseout="yc()" onmouseover="xs()" class="navr-btn-tan">
+								<a href="Personal.html"><div style="border-bottom: 0.5px solid #999 ;">个人中心</div></a>
+								<a href="ShopCart.html"><div style="border-bottom: 0.5px solid #999 ;">购物车</div></a>
+								<a href="index.EXIT"><div id="exit">退出</div></a>
+							</div>
+						</div>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a href="Personal.html" target="_blank">我的订单</a>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">会员</a></div>
+					<div class="navr-btn">|</div>
+					<div><a da target="_blank">甄选家居</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">企业采购</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">客服中心</a></div>
+				</div>	
+			</nav>
+		</header>
+		<section class="sec-nav">
+			<article class="sec-nav-art">
+				<section class="log"><img src="img/log.png" style="width: 240px;height: auto;"></section>
+				<div class="form">
+					<form id="search">
+						<input type="text" id="search" class="search" placeholder="请输入你要搜索的商品"/>
+						<button></button>
+					</form>
+				</div>
+				<a href="ShopCart.html" target="_blank"><div class="cart-pic">
+					<div id="cart_num" class="cart-pic-num">0</div>
+				</div></a>
+			</article>
+			<nav class="nav-zhu">
+				<article class="container">
+					<ul class="nav" style="padding-left: 0;">
+						<li><a href="index.html" target="_blank">首页</a></li>
+						<li>
+							<a href="commodity.html?fl=dgzm" target="_blank">灯饰照明</a>
+							<ul>
+								<li>
+									<a href="#" target="_blank">风格灯饰</a>
+									<ul>
+										<li><a href="#" target="_blank">简易现代灯</a></li>
+										<li><a href="#" target="_blank">现代中式灯</a></li>
+										<li>
+											<a href="#" target="_blank">田园风格灯</a>
+											<!--<ul>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+											</ul>-->
+										</li>
+										<li><a href="#" target="_blank">美式乡村灯</a></li>
+									</ul>
+								</li>
+								<li><a href="#" target="_blank">吸顶灯</a></li>
+								<li><a href="#" target="_blank">客厅灯</a></li>
+								<li><a href="#" target="_blank">卧室灯</a></li>
+								<li><a href="#" target="_blank">台灯</a></li>
+								<li><a href="#" target="_blank">浴霸</a></li>
+								<li><a href="#" target="_blank">简灯</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=cfwy" target="_blank">厨房卫浴</a>
+							<ul>
+								<li><a href="#" target="_blank">风格灯饰</a></li>
+								<li><a href="#" target="_blank">龙头</a></li>
+								<li><a href="#" target="_blank">浴室柜</a></li>
+								<li><a href="#" target="_blank">厨房置物架</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=wjgj" target="_blank">五金工具</a>
+							<ul>
+								<li><a href="#" target="_blank">工具箱</a></li>
+								<li><a href="#" target="_blank">锁具</a></li>
+								<li><a href="#" target="_blank">家用五金</a></li>
+								<li><a href="#" target="_blank">合页</a></li>
+								<li><a href="#" target="_blank">电动工具</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=dzdg" target="_blank">电子电工</a>
+							<ul>
+								<li><a href="#" target="_blank">开关</a></li>
+								<li><a href="#" target="_blank">插座</a></li>
+								<li><a href="#" target="_blank">智能家居</a></li>
+								<li><a href="#" target="_blank">转换器</a></li>
+								<li><a href="#" target="_blank">电线</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=jcjc" target="_blank">基础建材</a>
+							<ul>
+								<li><a href="#" target="_blank">瓷砖</a></li>
+								<li><a href="#" target="_blank">油漆</a></li>
+								<li><a href="#" target="_blank">地板</a></li>
+								<li><a href="#" target="_blank">地板</a></li>
+								<li><a href="#" target="_blank">施工材料</a></li>
+								<li><a href="#" target="_blank">墙地面材料</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=dzzx" target="_blank">定制装修</a>
+							<ul>
+								<li><a href="#" target="_blank">定制柜类</a></li>
+								<li><a href="#" target="_blank">橱柜定制</a></li>
+								<li><a href="#" target="_blank">榻榻米</a></li>
+								<li><a href="#" target="_blank">门</a></li>
+							</ul>
+						</li>
+						<li>
+							<a target="_blank">叶之家装</a> 
+							<!--href="commodity.html?fl="-->
+							<ul>
+								<li><a href="#" target="_blank">全套家装</a></li>
+								<li><a href="#" target="_blank">二手改造</a></li>
+								<li><a href="#" target="_blank">装修设计</a></li>
+							</ul>
+						</li>
+					</ul>
+				</article>
+			</nav>
+		</section>
+		<!----------------轮-------播-------------------->
+		<section>
+			<article class="carousel" style="background-color: antiquewhite;">
+				<div id="banner_tabs" class="flexslider">
+					<ul class="slides">
+						<li>
+							<a id="cara0" title="" target="_blank" href="">
+								<img id="carousel0" width="100%" height="482" style="" title="" src="img/carousel/alpha.png">
+							</a>
+						</li>
+						<li>
+							<a id="cara1" title="" target="_blank" href="">
+								<img id="carousel1" width="100%" height="482" style="" title="" src="img/carousel/alpha.png">
+							</a>
+						</li>
+						<li>
+							<a id="cara2" title="" target="_blank" href="">
+								<img id="carousel2" width="100%" height="482" style="" title="" src="img/carousel/alpha.png">
+							</a>
+						</li>
+						<li>
+							<a id="cara3" title="" target="_blank" href="">
+								<img id="carousel3" width="100%" height="482" style="" title="" src="img/carousel/alpha.png">
+							</a>
+						</li>
+						<li>
+							<a id="cara4" title="" target="_blank" href="">
+								<img id="carousel4" width="100%" height="482" style="" title="" src="img/carousel/alpha.png">
+							</a>
+						</li>
+					</ul>
+					<ul class="flex-direction-nav">
+						<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+						<li><a class="flex-next" href="javascript:;">Next</a></li>
+					</ul>
+					<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+						<li><a>1</a></li>
+						<li><a>2</a></li>
+						<li><a>3</a></li>
+						<li><a>4</a></li>
+						<li><a>5</a></li>
+					</ol>
+				</div>
+			</article>
+			<section  class="tier">
+				<section class="details" style="height: 500px;">
+					<article  class="tit-bar">
+						<span><a class="title-bar" href="#" target="_blank">叶之品牌</a></span>
+						<font>精心挑选，贴心放送</font>
+						<div class="tit-bar-right">更多品牌></div>
+					</article >
+					<section class="deta-sec-fir">
+						<a href="#" target="_blank"><img id="brand_0" title="" src="" style="width: 340px;height: 410px;" /></a>
+					</section>
+					<section class="deta-sec-fir" style="margin: 0 15px;">
+						<a href="#" target="_blank"><img id="brand_1" title="" src="" style="width: 340px;height: 410px;" /></a>
+					</section>
+					<section class="deta-sec-fir" style="border: none; padding: 0;">
+						<div style="margin-bottom: 10px;">
+							<a href="#" target="_blank"><img id="brand_2" title="" src="" style="width: 340px;height: 194px;" /></a>
+						</div>
+						<div>
+							<a href="#" target="_blank"><img id="brand_3" title="" src="" style="width: 340px;height: 194px;" /></a>
+						</div>
+					</section>
+				</section>
+			</section >
+			<!--010101-->
+			<section  class="tier" style="margin-top: 50px;">
+				<section class="details" style="height: 400px;">
+					<article  class="tit-bar">
+						<span><a class="title-bar" href="#" target="_blank">新品放送</a></span>
+						<font>为你寻觅世间好物</font>
+						<div class="tit-bar-right">更多新品></div>
+					</article >
+					<!--左右按钮-->
+					<article onclick="shang()" class="sec-btn left-btn"><img src="img/carousel/left_btn.png"/></article>
+					<article onclick="xia()" class="sec-btn right-btn"><img src="img/carousel/right_btn.png"/></article>
+					<article class="art-sec">
+						<article id="anm" class="art-sec-nei">
+							<!---->
+							<a href="details.html" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_0" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_0" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_0"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_1" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_1" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_1"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_2" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_2" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_2"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_3" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_3" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_3"></span></div>
+							</section></a>
+							<!--第一节 end-->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_4" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_4" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_4"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_5" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_5" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_5"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_6" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_6" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_6"></span></div>
+							</section></a>
+							<!---->
+							<a href="#" target="_blank"><section class="deta-sec-sec">
+								<section class="dss-img">
+									<img id="new_7" src="" style="width: 240px;height: 240px;" />
+								</section>
+								<div id="newnam_7" class="com-name">00000</div>
+								<div class="com-pir">￥<span id="newprice_7"></span></div>
+							</section></a>
+						</article>
+					</article>
+				</section>
+			</section >
+			<!--0202-->
+			<section  class="tier cor">
+				<section class="details" style="height: 520px;padding-top: 20px;">
+					<article  class="tit-bar">
+						<span><a class="title-bar" href="#" target="_blank">人气推荐</a></span>
+						<font>为你推送当下热门商品</font>
+						<div class="tit-bar-right">更多热门></div>
+					</article >
+					<article class="com-show">
+						<section class="com-show-left">
+							<div style="width:100%;height: 70%;">
+								<a href="details.html" target="_blank"><img id="hot_0" src="" style="width: 380px;height: 255px;" /></a>
+							</div>
+							<div id="hotname_0" class="com-name" style="font-size: 30px;">00000</div>
+							<div class="com-pir" style="font-size:26px; margin-top: 20px;">￥<span id="hotPrice_0"></span></div>
+						</section>
+						<section class="com-show-right">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_1" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_1" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_1"></span></div>
+						</section>
+						<section class="com-show-right">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_2" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_2" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_2"></span></div>
+						</section>
+						<section class="com-show-right">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_3" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_3" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_3"></span></div>
+						</section>
+						<section class="com-show-right down">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_4" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_4" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_4"></span></div>
+						</section>
+						<section class="com-show-right down">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_5" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_5" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_5"></span></div>
+						</section>
+						<section class="com-show-right down">
+							<div style="width:100%;height: 65%;">
+								<a href="#" target="_blank"><img id="hot_6" src="" style="width: 213px;height: 115px;" /></a>
+							</div>
+							<div id="hotname_6" class="com-name" style="font-size: 18px;">00000</div>
+							<div class="com-pir" style="font-size:14px; margin-top: 10px;">￥<span id="hotPrice_6"></span></div>
+						</section>
+					</article>
+				</section>
+			</section >
+			<!--030303-->
+			<section  class="tier">
+				<section class="details" style="height: 440px;">
+					<article class="tit-bar">
+						<span><a class="title-bar" href="#" target="_blank">限时购</a></span>
+						<font>特价大抢购</font>
+						<div class="tit-bar-right">更多抢购></div>
+					</article>
+					<article class="new-to-purchase">
+						<section class="rtp-left">
+							<section class="rtp-com" style="border-bottom: none;">
+								<div style="width: 225px;margin-left: 4px;height: 185px;">
+									<div id="rushname_0" class="rtp-com-name" style="text-align: right;">00000</div>
+									<div class="rtp-com-pro">
+										<div id="pro_RHB0" style="width: 10%;" class="rtp-com-xh"></div>
+									</div>
+									<div class="rtp-com-zt">
+										还剩
+										<span id="rushnum_0" style="margin-right: 0;">000</span>
+										件
+									</div>
+									<div class="rtp-com-pir">
+										<div id="currentPrice_0" style="font-size: 22px;margin-top: -2px;font-weight: 600;">000</div>
+										<div style="font-size: 18px;">￥</div>
+										<div style="font-size: 14px;margin-top:5px;">限时价</div>
+										<div style="margin-right: 10px;color: #999;">
+											<div style="font-size: 12px;margin-top: 5px;">￥<del id="rushPrice_0">000</del></div>
+											<div style="font-size:10px;margin-top: 7px;">原价</div>
+										</div>
+									</div>
+									<div>
+										<form>
+											<input id="rushid_0" class="rtp-com-in" type="text" value=""/>
+											<button type="button" id="RHB0" class="rtp-com-btn">立即抢购</button>
+										</form>
+									</div>
+								</div>
+								<div style="width: 185px; height: 100%;">
+									<img id="rush_0" src="" style="width: 175px;height: 175px;margin: 5px;" />
+								</div>
+							</section>
+							<section class="rtp-com">
+								<div style="width: 225px;margin-left: 4px;height: 185px;">
+									<div id="rushname_1" class="rtp-com-name" style="text-align: right;">00000</div>
+									<div class="rtp-com-pro">
+										<div id="pro_RHB1" style="width: 10%;" class="rtp-com-xh"></div>
+									</div>
+									<div class="rtp-com-zt">
+										还剩
+										<span id="rushnum_1" style="margin-right: 0;">000</span>
+										件
+									</div>
+									<div class="rtp-com-pir">
+										<div id="currentPrice_1" style="font-size: 22px;margin-top: -2px;font-weight: 600;">000</div>
+										<div style="font-size: 18px;">￥</div>
+										<div style="font-size: 14px;margin-top:5px;">限时价</div>
+										<div style="margin-right: 10px;color: #999;">
+											<div style="font-size: 12px;margin-top: 5px;">￥<del id="rushPrice_1">000</del></div>
+											<div style="font-size:10px;margin-top: 7px;">原价</div>
+										</div>
+									</div>
+									<div>
+										<form>
+											<input id="rushid_1" class="rtp-com-in" type="text" value=""/>
+											<button type="button" id="RHB1" class="rtp-com-btn">立即抢购</button>
+										</form>
+									</div>
+								</div>
+								<div style="width: 185px; height: 100%;">
+									<img id="rush_1" src="" style="width: 175px;height: 175px;margin: 5px;" />
+								</div>
+							</section>
+						</section>
+						<section class="rtp-date">
+							<div style="font-size: 36px; margin-top: 80px;"><span id="rushses"></span>点场</div>
+							<div style="font-size: 18px;margin: 20px 0;">距离结束</div>
+							<div class="date" style="width: 160px;">
+								<div id="H" class="SJ" style="margin-left: 10px;">hh</div>
+								<div id="m" class="SJ" style="margin: 0 10px;">mm</div>
+								<div id="s" class="SJ">ss</div>
+							</div>
+							<div>
+								<a href="#" target="_blank">
+									<div class="date-btn" style="width: 30%;">全部抢购</div>
+								</a>
+							</div>
+						</section>
+						<section class="rtp-right">
+							<section class="rtp-com" style="border-bottom: none;">
+								<div style="width: 185px;">
+									<img id="rush_2" src="" style="width: 175px;height: 175px;margin: 5px;" />
+								</div>
+								<div style="width: 225px;margin-left: 4px;height: 185px;">
+									<div  id="rushname_2" class="rtp-com-name" style="text-align: left;">00000</div>
+									<div class="rtp-com-pro">
+										<div id="pro_RHB2" style="width: 10%;" class="rtp-com-xh"></div>
+									</div>
+									<div class="rtp-com-zt">
+										还剩
+										<span id="rushnum_2" style="margin-right: 0;">000</span>
+										件
+									</div>
+									<div class="rtp-com-pir">
+										<div style="font-size: 14px;margin-top:5px;">限时价</div>
+										<div style="font-size: 18px;">￥</div>
+										<div id="currentPrice_2" style="font-size: 20px;margin-top: -2px;font-weight: 600;">000</div>
+										<div style="margin-left: 10px;color: #999;">
+											<div style="font-size:10px;margin-top: 7px;">原价</div>
+											<div style="font-size: 12px;margin-top: 5px;">￥<del id="rushPrice_2">000</del></div>
+										</div>
+									</div>
+									<form>
+										<button type="button" id="RHB2" class="rtp-com-btn">立即抢购</button>
+										<input id="rushid_2" class="rtp-com-in" type="text" value=""/>
+									</form>
+								</div>
+							</section>
+							<section class="rtp-com">
+								<div style="width: 185px;">
+									<img id="rush_3" src="" style="width: 175px;height: 175px;margin: 5px;" />
+								</div>
+								<div style="width: 225px;margin-left: 4px;height: 185px;">
+									<div  id="rushname_3" class="rtp-com-name" style="text-align: left;">00000</div>
+									<div class="rtp-com-pro">
+										<div id="pro_RHB3" style="width: 10%;" class="rtp-com-xh"></div>
+									</div>
+									<div class="rtp-com-zt">
+										还剩
+										<span id="rushnum_3" style="margin-right: 0;">000</span>
+										件
+									</div>
+									<div class="rtp-com-pir">
+										<div style="font-size: 14px;margin-top:5px;">限时价</div>
+										<div style="font-size: 18px;">￥</div>
+										<div id="currentPrice_3" style="font-size: 20px;margin-top: -2px;font-weight: 600;">000</div>
+										<div style="margin-left: 10px;color: #999;">
+											<div style="font-size:10px;margin-top: 7px;">原价</div>
+											<div style="font-size: 12px;margin-top: 5px;">￥<del id="rushPrice_3">000</del></div>
+										</div>
+									</div>
+									<form>
+										<button  type="button" id="RHB3" class="rtp-com-btn">立即抢购</button>
+										<input id="rushid_3" class="rtp-com-in" type="text" value=""/>
+									</form>
+								</div>
+							</section>
+						</section>
+					</article>
+				</section>
+			</section >
+		</section>
+		<form></form>
+		<iframe class="ifr-two" src="iframe/foot.html" frameborder="0" scrolling="no"></iframe>
+	</body>
+	<!--AJAX位置-->
+	<script>
+		var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 5000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function() {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function() {
+				bannerSlider.next()
+			});
+		//			/定时器/
+			
+			let time = 3600;//每场所用时间
+			let tmp = time;
+			let Rbatch = 1;//每场的商品
+			let Rsession = 1;//场次
+			let rushses=0;//开始场次时间
+				function countdown(){
+					let h,m,s;
+					if(time>=0){
+						h=Math.floor(time/3600);
+						m=Math.floor(time%3600/60);
+						s=Math.floor(time%3600%60);
+					}
+					if(h<10){h="0"+h;}
+					if(m<10){m="0"+m;}
+					if(s<10){s="0"+s;}
+					time--;
+					$("#rushses").html(rushses)
+					$("#H").html(h);
+					$("#m").html(m);
+					$("#s").html(s);
+					if(time<0){
+						Rbatch++;
+						if(Rbatch==4){Rbatch=1;}
+						rushses=rushses+Rsession;
+						if(rushses==24){rushses=0;}
+						time=tmp;
+						rush();
+					}
+				}
+				
+				setInterval("countdown()",1000)
+				function rush(){
+					/********抢购AJAX*********/
+			  		$.ajax({
+						type:'get',
+						url:'cq.rush?Rbatch='+Rbatch,
+						async:false,
+						dataType:'json',
+						success:function(data){
+							var obj=eval(data);
+							let mes = obj.message;
+							let per = obj.percent;
+							$.each(mes,function(i){
+								let idpro="#pro_RHB"+i;
+								let porid="por"+i;
+								let idimg="#rush_"+i;
+								let iddiv="#rushname_"+i;
+								let idSpan="#rushPrice_"+i;
+								let idspan="#rushnum_"+i;
+								let idinp="#rushid_"+i;
+								let iddel="#currentPrice_"+i;
+								let currentPrice = parseInt(parseFloat(mes[i].Rcprice)*0.8);
+								$(idpro).css("width",per[i]);
+								$(idimg).attr("src",mes[i].Rcimgurl);
+								$(iddiv).html(mes[i].Rcname);
+								$(idSpan).html(mes[i].Rcprice);
+								$(idspan).html(mes[i].Rcnum);
+								$(idinp).val(mes[i].Rcid)
+								$(iddel).html(currentPrice);
+							});
+						}
+					});
+				};
+				$("button").click(function(){
+					var id = $(this).attr("id"); //获取点击的id
+					let Rcnum = 0;
+					let Rcid = 0;
+					var idspan = 0;
+					var idpro = 0;
+					if(id=="RHB0"){Rcnum=($("#rushnum_0").html())-1;Rcid=$("#rushid_0").val();idspan="#rushnum_0";}
+					if(id=="RHB1"){Rcnum=($("#rushnum_1").html())-1;Rcid=$("#rushid_1").val();idspan="#rushnum_1";}
+					if(id=="RHB2"){Rcnum=($("#rushnum_2").html())-1;Rcid=$("#rushid_2").val();idspan="#rushnum_2";}
+					if(id=="RHB3"){Rcnum=($("#rushnum_3").html())-1;Rcid=$("#rushid_3").val();idspan="#rushnum_3";}
+					$.ajax({
+						type:'get',
+						url:'engine/cq.rushnum?Rcnum='+Rcnum+'&Rcid='+Rcid,
+						async:false,
+						dataType:'json',
+						success:function(data){
+							var obj=eval(data);
+							$(idspan).html(Rcnum);
+							var state = (obj.state)
+							if(state=="0000"){
+								alert("抢购成功");
+							}else{
+								alert("抢购失败");
+							}
+						}
+					});
+				});
+				
+		$(function(){
+//			————————————AJAX——————————————
+
+			$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+						};
+					}
+				});
+			/************购物车条数获取************/
+			$.ajax({
+				type:"get",
+				url:"spcb.spcb",
+				async:false,
+				dataType:'json',
+				success:function(data){
+					var obj=eval(data);
+					let Cnum = obj.Cnum;
+					$("#cart_num").html(Cnum);
+				}
+			});	
+			/*******轮播AJAX*********/
+				$.ajax({
+					type:'get',
+					url:'cq.ning?cname=carousel',
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						$.each(obj,function(i){
+							let id="#carousel"+i;
+							let aid="#cara"+i;
+							let add="details.html?cid="+obj[i].cid;
+							$(id).css("background","url("+obj[i].Cimgurl+") no-repeat center");
+							$(id).attr("title",obj[i].cremark);
+							$(aid).attr("href",add);
+							});
+						}
+					});
+			/********品牌AJAX*********/
+				$.ajax({
+					type:'get',
+					url:'cq.ning?cname=brand',
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						$.each(obj,function(i){
+							let id="#brand_"+i;
+							$(id).attr("src",obj[i].Cimgurl);
+							$(id).attr("title",obj[i].cremark);
+							});
+						}
+					});
+			/********新品AJAX*********/		
+			  	$.ajax({
+					type:'get',
+					url:'cq.ning?cname=new',
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						$.each(obj,function(i){
+							let idimg="#new_"+i;
+							let iddiv="#newnam_"+i;
+							let idspan="#newprice_"+i;
+							$(idimg).attr("src",obj[i].Cimgurl);
+							$(iddiv).html(obj[i].cremark);
+							$(idspan).html(obj[i].cprice);
+						});
+					}
+				});
+			/********人气AJAX*********/		
+			  	$.ajax({
+					type:'get',
+					url:'cq.ning?cname=hot',
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						$.each(obj,function(i){
+							let idimg="#hot_"+i;
+							let iddiv="#hotname_"+i;
+							let idspan="#hotPrice_"+i;
+							$(idimg).attr("src",obj[i].Cimgurl);
+							$(iddiv).html(obj[i].cremark);
+							$(idspan).html(obj[i].cprice);
+						});
+					}
+				});
+				
+				rush();
+		});
+	</script>
+</html>
+	  

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<form id="uploadForm" enctype="multipart/form-data" action="FileLoac" method="post" >
+<input type="file" name="img">
+<button type="submit" id="tijiao">提交</button>
+</form>
+
+</body>
+<script type="text/javascript">
+$(function(){
+// 	$("#tijiao").click(function(){
+// 		$.ajax({
+// 			url:'FileLoac',
+// 			//data:new FormData($("#uploadForm")[0]),
+// 			data:$('#uploadForm').serialize(),
+// 			type:'post',
+// 			success:function (data) {
+// 				alert("1111");
+// 			},
+// 			error:function(data){
+// 				alert("错误");
+// 			}
+// 		});
+// 	});
+});
+
+</script>
+</html>

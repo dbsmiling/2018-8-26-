@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心-叶之装饰</title>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="iframe/css/head.css" />
+	<link rel="stylesheet" href="iframe/css/navigation.css" />
+	<link rel="stylesheet" href="css/indexlzz.css" />
+	<link rel="stylesheet" href="css/body.css" />
+	<link rel="stylesheet" href="css/demo.css" />
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="nav-l">
+				<div style="margin-left:0;">
+					<div>
+						<a href="index.html" target="_blank">美丽家-魅力家-叶之家具</a>
+					</div>
+				</div>
+				<div>
+					<div>
+						<div>
+							<ul>
+								<li>
+									<a href="F" target="_blank">七夕系列饰品上线特惠</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="nav-r">
+					<div>
+						<div id="nar_lr" style="display: block;">
+							<div class="navr-lr">
+								<div>
+									<div id="login" class="" onclick="window.location='login.html'" title="leaf登录">登录</div>
+								</div>
+							</div>
+							<div class="navr-lr" style="margin-left:20px;">
+								<div >
+									<div onclick="window.location='regin.html'">注册</div>
+								</div>
+							</div>
+						</div>
+						<div id="user" style="display: none;">
+							<div onmouseout="yc()" onmouseover="xs()" style="">
+								<a href=""><div id="user_name" style="text-align: center;overflow: hidden;">123456</div></a>
+							</div>
+							<div id="service" onmouseout="yc()" onmouseover="xs()" class="navr-btn-tan">
+								<a href="Personal.html"><div style="border-bottom: 0.5px solid #999 ;">个人中心</div></a>
+								<a href="ShopCart.html"><div style="border-bottom: 0.5px solid #999 ;">购物车</div></a>
+								<a href="index.EXIT"><div id="exit">退出</div></a>
+							</div>
+						</div>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a href="Personal.html" target="_blank">我的订单</a>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">会员</a></div>
+					<div class="navr-btn">|</div>
+					<div><a da target="_blank">甄选家居</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">企业采购</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">客服中心</a></div>
+				</div>	
+		</nav>
+	</header>
+	<section class="sec-nav">
+		<article class="sec-nav-art">
+			<section class="log"><img src="img/log.png" style="width: 240px;height: auto;"></section>
+			<div class="form">
+				<form action="" method="get">
+					<input type="text" id="search" class="search" />
+					<button></button>
+				</form>
+			</div>
+			<a href="" target="_blank"><div class="cart-pic">
+					<div id="cart_num" class="cart-pic-num">0</div>
+				</div></a>
+		</article>
+		<nav class="nav-zhu" >
+			<article class="container">
+				<ul class="nav" style="padding-left: 0;">
+					<li><a href="index.html" target="_blank">首页</a></li>
+					<li>
+						<a href="#" target="_blank">账号管理</a>
+						<ul>
+							<li><a id="gerenzhongxin">个人中心</a></li>
+							<li><a id="idxinxi">账号信息</a></li>
+							<li><a href="#" target="_blank">消息通知</a></li>
+							<li><a href="#" target="_blank">账号安全</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"  id="jiaoyiguanli">交易管理</a>
+						<ul>
+							<li><a href="#"  id="Order-guanli" >订单管理</a></li>
+							<li><a href="#" target="_blank">我的红包</a></li>
+							<li><a href="#" target="_blank">优惠券(0)</a></li>
+							<li><a href="#" target="_blank">礼品卡</a></li>
+							<li><a href="#" target="_blank">优惠购</a></li>
+						</ul>
+					</li>
+					<li><a id="dizhiguanli" >地址管理</a></li>
+					<li><a href="#" target="_blank">我的宝贝</a></li>
+					<li><a href="#" target="_blank">我的收藏</a></li>
+					<li><a href="#" target="_blank">我的积分</a></li>
+					
+					<li>
+						<a href="#" target="_blank">服务中心</a>
+						<ul>
+							<li><a href="#" target="_blank">售后记录</a></li>
+							<li><a href="#" target="_blank">价格保护</a></li>
+							<li><a href="#" target="_blank">帮助中心</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</article>
+		</nav>
+	</section>
+	<section style="width: 1090px; margin: 0 auto;">
+		<div id="center" >
+			<!--中间上部-->
+			<hr />
+			<div style="height: 40px;width:100%;line-height: 40px;">
+				<span style="font-size: 18px;color: black;margin-left: 25px">首页</span><span id="ziye" style="font-size: 14px;color:#A599A5;margin-left: 8px;">>个人中心</span>
+			</div>
+			<!-- **************************************下面是订单表*************************************************************** -->
+			<div id="orderList">
+				<table border="1" cellspacing="0" cellpadding="0" id="tab">
+					<tr calss="List-Top"><td>订单编号</td><td>订单日期</td><td>商品图片</td><td>商品信息</td><td>单价</td><td>数量</td><td>实付金额</td><td>订单状态</td><td>买家备注</td><td>操作类型</td></tr>
+					<tr class="List-order" id="list-order-1">
+						<td id="order-id-1"></td>
+						<td id="order-data-1"></td>
+						<td> <img id="order-img-1"  alt="" src="img/shop1.png" width="80px" height="80px"></td>
+						<td id="order-message-1"></td>
+						<td id="order-price-1"></td>
+						<td id="order-num-1"></td>
+						<td id="order-money-1"></td>
+						<td id="order-status-1"></td>
+						<td id="order-remark-1"></td>
+						<td id="order-del-1" style="cursor:pointer;">删除</td>
+					</tr>
+					<tr class="List-order" id="list-order-2">
+						<td id="order-id-2"></td>
+						<td id="order-data-2"></td>
+						<td ><img id="order-img-2" src="img/shop1.png" width="80px" height="80px" ></td>
+						<td id="order-message-2"></td>
+						<td id="order-price-2"></td>
+						<td id="order-num-2"></td>
+						<td id="order-money-2"></td>
+						<td id="order-status-2"></td>
+						<td id="order-remark-2"></td>
+						<td id="order-del-2" style="cursor:pointer;">删除</td>
+					</tr>
+					<tr class="List-order" id="list-order-3">
+						<td id="order-id-3"></td>
+						<td id="order-data-3"></td>
+						<td><img id="order-img-3" src="img/shop1.png" width="80px" height="80px" ></td>
+						<td id="order-message-3"></td>
+						<td id="order-price-3"></td>
+						<td id="order-num-3"></td>
+						<td id="order-money-3"></td>
+						<td id="order-status-3"></td>
+						<td id="order-remark-3"></td>
+						<td id="order-del-3" style="cursor:pointer;">删除</td>
+					</tr>
+					<tr class="List-order" id="list-order-4">
+						<td id="order-id-4"></td>
+						<td id="order-data-4"></td>
+						<td><img id="order-img-4" src="img/shop1.png" width="80px" height="80px" ></td>
+						<td id="order-message-4"></td>
+						<td id="order-price-4"></td>
+						<td id="order-num-4"></td>
+						<td id="order-money-4"></td>
+						<td id="order-status-4"></td>
+						<td id="order-remark-4"></td>
+						<td id="order-del-4" style="cursor:pointer;">删除</td>
+					</tr>
+				
+				</table>
+				<!--
+				<table  border="1" cellspacing="0" cellpadding="0" id="tab1">
+					 
+				</table>
+				-->
+				<!-- 分页  订单列表******************************************* -->
+				<div id="page-list">
+					<div id="sumPage">一共有x页</div>
+					<div id="numPage">
+						<span id="firstPage">首页</span>
+						<span id="onPage">上一页</span>
+						<span id="iPage">第一页</span>
+						<span id="nextPage">下一页</span>
+						<span id="endPage">尾页</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- *************************************上面是订单表*************************************************************** -->
+			<!--中间左侧-->
+			<div class="list" style="height: 500px;width: 200px;float: left;margin-top: 10px;border:1px solid #000 ;margin-left: 25px;cursor:pointer;">
+				<img style="margin-top: 0px;" title="打造精致生活 " src="img/left.png" width="200px"height="500px">
+			</div>
+			<!--*******************************************默认页(个人中心)****************************************************-->
+			<div id="grzx" style="display: block;float: left;height: 500px;width: 800px;">
+				<!--中间右侧上         默认页-->
+				<div id="" style="height:240px ;width: 800px; border:1px solid #000 ;float: left;margin-left: 30px;margin-top: 10px;background-color: #F4F6FC;">
+					<!--头像-->
+					<div style="height: 200px; width: 350px;border-right: 1px dashed #000;margin-left: 10px;margin-top: 10px;float: left;">
+						<img id="userPhoto" src="img/via.png" width="80px" ;height="80px" />
+						<span id="userName">用户名</span>
+						<br /><br />
+						<span id="userValue">等级</span>
+						<span id="userNum">0/1</span>
+						<!--进度条-->
+						<div id="progress">
+							<span></span>
+						</div>
+					</div>
+					<!--账户信息-->
+					<div id="" style="height: 200px;width: 400px;float: left;margin-top: 10px;margin-left: 20px;">
+						<!--左侧信息-->
+						<div id="idLeft">
+							<table>
+								<tr>
+									<td>我的红包</td>
+									<td><a id="money">￥0.00</a></td>
+								</tr>
+								<tr>
+									<td>可兑返利</td>
+									<td><a id="fanli">￥0.00</a></td>
+								</tr>
+								<tr>
+									<td>我的积分</td>
+									<td><a id="jifen">&nbsp;&nbsp;0</a></td>
+								</tr>
+							</table>
+						</div>
+						<!--右侧信息-->
+						<div id="idRight">
+							<table>
+								<tr>
+									<td>优惠券</td>
+									<td><a id="youhui">0张</a></td>
+								</tr>
+								<tr>
+									<td>礼品卡</td>
+									<td><a id="lipin">￥0.00</a></td>
+								</tr>
+								<tr>
+									<td>待领礼包</td>
+									<td><a id="libao">&nbsp;&nbsp;0个</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!--中间右侧下   单个订单      默认页-->
+				<div id="" style="height: 235px; width: 800px;border:1px solid black ;float: left;margin-left:30px;margin-top: 20px;">
+					<!--标题-->
+					<div id="dingdan" style="background-color: gainsboro;width: auto;height: 30px;width: 800px;">
+						<span style="padding-left: 20px;line-height: 30px;">未完成的订单</span>
+						<span style="padding-left: 600px;line-height: 30px;"><a href="#" id="allOrder" style="color: black;font-size: 16px;">所有订单</a></span>
+					</div>
+					<div style="background-image: url('img/bg_.png') ; background-repeat:no-repeat;background-position-x:center; width:800px;height: 200px;">
+						<!-- 订单信息-->
+						<div  style="width:780px;height: 180px;margin-left: 10px;margin-top: 10px;">
+							<!-- 订单头部信息-->
+							<div id="dingdanHead" style="width: 780px;height: 30px;background-color: rgb(241,241,241);">
+								<div style="float: left;">
+									<input type="checkbox" name="dingdanID" style="width:30px;margin-top: 5px;">
+								</div>
+								<div style="float: left;width:180px;">
+									<span id="Head-Time" style="margin-left: 20px;line-height:30px; ">时间</span>
+								</div>
+								<div style="float: left;width:500px;">
+									<span id="Head-Id" style="margin-left: 20px;line-height:30px; ">订单编号</span>
+								</div>
+								<div style="float: left; cursor:pointer;">
+									<span id=Head-Remove style="width:100px;height:30px;margin-left: 0px;line-height:30px; ">查看详情</span>
+								</div>
+							</div>
+							<!-- 订单内容信息-->
+							<div style="width:780px;height: 150px;border-top:1px solid #000 ;border-bottom:1px solid #000 ;" >
+								<!-- 订单内容信息 标题-->
+								<div style="width:780px;height: 20px; ">
+									<div style="width:140px;height: 20px;float:left;margin-left: 0px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 20px;">
+										<span>商品图片</span>
+									</div>
+									<div style="width:180px;height:20px; float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 20px;">
+										<span>商品信息</span>
+									</div>
+									<div style="width:60px;height: 20px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204); text-align: center;line-height: 20px;">
+										<span>单价</span>
+									</div>
+									<div style="width:50px;height: 20px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 20px; ">
+										<span>数量</span>
+									</div>
+									<div style="width:70px;height: 20px;float:left;margin-left: 10px; margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 20px;">
+										<span>实付金额</span>
+									</div>
+									<div style="width:100px;height: 20px;float:left;margin-left: 10px; margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 20px;">
+										<span>订单状态</span>
+									</div>
+									<div style="width:110px;height: 20px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed #8B8386;border-right:1px dashed #8B8386; text-align: center;line-height: 20px;">
+										<span>买家备注</span>
+									</div>
+								</div>
+								<div style="width:140px;height: 110px;float:left;margin-left: 0px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 130px;">
+									<img id="ShopImg" alt="" src="img/shop1.png" width="100px;"height="100px;">
+								</div>
+								<div style="width:180px;height:110px; float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 130px;">
+									<span id="ShopName"></span>
+								</div>
+								<div style="width:60px;height: 110px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204); text-align: center;line-height: 130px;">
+									<span id="ShopUnitPrice"></span>
+								</div>
+								<div style="width:50px;height: 110px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 130px; ">
+									<span id="ShopNum"></span>
+								</div>
+								<div style="width:70px;height: 110px;float:left;margin-left: 10px; margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 130px;">
+									<span id="ShopAllPrice"></span>
+								</div>
+								<div style="width:100px;height: 110px;float:left;margin-left: 10px; margin-top:10px;border-left:1px dashed rgb(204,204,204);text-align: center;line-height: 130px;">
+									<span id="ShopStatus"></span>
+								</div>
+								<div style="width:110px;height: 110px;float:left;margin-left: 10px;margin-top:10px;border-left:1px dashed #8B8386;border-right:1px dashed #8B8386; text-align: center;line-height: 130px;">
+									<span id="ShopRemark"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--***************************************账号信息(默认隐藏)******************************************************-->
+			<div id="zhxx" style="display: none;height: 500px;width: 800px;margin-left: 30px;margin-top: 10px;border:1px solid #000 ;float: left;background-color: #F2F2F2;">
+				<!--标题-->
+				<div id="" style="height: 40px;width: 800px;text-align: center;background-color:darkgray ">
+					<ul>
+						<li id="jibenziliao" style="width:210px; float: left;margin-left: 0px;font-size: 16px;text-align: center;line-height:40px;">
+							<a href="#" class="ID-a-style">基本资料</a>
+						</li>
+						<li id="ganxingqu" style="width:210px;float: left;margin-left: 85px;font-size: 16px;text-align: center;line-height:40px;">
+							<a href="#" class="ID-a-style">感兴趣的分类</a>
+						</li>
+						<li id="mybaby" style="width:210px;float: left;margin-left: 85px;font-size: 16px;text-align: center;line-height:40px;">
+							<a href="#" class="ID-a-style">我的宝贝</a>
+						</li>
+					</ul>
+				</div>
+				<!--详细信息-->
+				<div id="Upd-user" style="height: 460px;width: 760px;margin-left: 20px;">
+					<form id="form1">
+						<span id="sp-one">用户头像</span>
+<!-- 						<div id="sp-three"></div> -->
+						<img id="sp-two" src="img/1.png" width="80px" height="80px" /><br />
+						<span id="sp">用户邮箱</span><span id="useremail" >123456@xx.com</span><br />
+						<span id="sp">账&nbsp;&nbsp;&nbsp;&nbsp;号</span><span id="userID">123456</span><br /> 
+						<span id="sp">昵&nbsp;&nbsp;&nbsp;&nbsp;称</span><input type="text" name="username" placeholder="请输入姓名" /><br />
+						<span id="sp">性&nbsp;&nbsp;&nbsp;&nbsp;别</span><input type="radio" class="radio" name="sex" value="男" />男<input class="radio" type="radio" name="sex" value="女" />女<br />
+						<span id="sp">手机号码</span><input type="text" name="tell" placeholder="请输入常用手机号" /><br />
+						<span id="sp">出生日期</span><input type="text" name="bir"  placeholder="例如:2000-01-02"/><br />
+						<button type="button" id="btn-user">保存</button>
+					</form>
+				</div>
+			</div>
+			<!--*******************************************收货地址(默认隐藏)*********************************************************-->
+			<div id="dzxx" style="display: none;height: 500px;width: 800px;margin-left: 30px;margin-top: 10px;border:1px solid #000 ;float: left;background-color: #F2F2F2;">
+				<div id="getBaby" style="height: 40px;width: 800px;background-color:darkgray; ">
+					<div id="getBaby-hvaeAdd" style="width: 400px;height:40px; float: left;line-height:40px;text-align: center;font-size:20px;cursor:pointer;">已有收货地址</div>
+					<div id="getBaby-address" style="width: 400px;height:40px; float: left;line-height:40px;text-align: center;font-size:20px;cursor:pointer; ">添加/修改收货地址</div>
+				</div>
+				<!-- 收货地址显示 --> 
+				<div id="show-add" style="width: 800px;height: 460px;">
+					<table id="showadd"style="border:1px solid black; width: 700px;height: 420px;text-align: center;margin-left: 50px;margin-top: 20px;">
+						<tr>
+							<td class="showadd-id" >您的ID</td>
+							<td class="showadd-name">收货人姓名</td>
+							<td class="showadd-tell">收货人电话</td>
+							<td class="showadd-add">收货人地址</td>
+							<td class="showadd-option">操作类型</td>
+						</tr>
+						<tr>
+							<td class="showadd-id" id="showadd-one-id"></td>
+							<td class="showadd-name" id="showadd-one-name"></td>
+							<td class="showadd-tell" id="showadd-one-tell"></td>
+							<td class="showadd-add" id="showadd-one-add"></td>
+							<td class="showadd-option">
+								<div class="del-one" id="del-one1">删除</div>
+								<div class="upd-one" id="upd-one1">修改</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="showadd-id" id="showadd-two-id"></td>
+							<td class="showadd-name" id="showadd-two-name"></td>
+							<td class="showadd-tell" id="showadd-two-tell"></td>
+							<td class="showadd-add" id="showadd-two-add"></td>
+							<td class="showadd-option">
+								<div class="del-one" id="del-two2">删除</div>
+								<div class="upd-one" id="upd-two2">修改</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="showadd-id" id="showadd-three-id"></td>
+							<td class="showadd-name" id="showadd-three-name"></td>
+							<td class="showadd-tell" id="showadd-three-tell"></td>
+							<td class="showadd-add" id="showadd-three-add"></td>
+							<td class="showadd-option">
+								<div class="del-one" id="del-three3">删除</div>
+								<div class="upd-one" id="upd-three3">修改</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="showadd-id" id="showadd-four-id"></td>
+							<td class="showadd-name" id="showadd-four-name"></td>
+							<td class="showadd-tell" id="showadd-four-tell"></td>
+							<td class="showadd-add" id="showadd-four-add"></td>
+							<td class="showadd-option">
+								<div class="del-one" id="del-four4">删除</div>
+								<div class="upd-one" id="upd-four4">修改</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="showadd-id" id="showadd-five-id"></td>
+							<td class="showadd-name" id="showadd-five-name"></td>
+							<td class="showadd-tell" id="showadd-five-tell"></td>
+							<td class="showadd-add" id="showadd-five-add"></td>
+							<td class="showadd-option">
+								<div class="del-one" id="del-five5">删除</div>
+								<div class="upd-one" id="upd-five5">修改</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<!-- 收货地址添加 -->
+				<div id="Upd-add" style="height: 460px;width: 760px;margin-left: 20px; display: none;">
+					<form id="address">
+						<input type="text" name="recipients" id="Upd-recipients" style="display: none">
+						<table id="addtable">
+							<tr><td>收货人姓名</td><td><input type="text" name="addname"></td></tr>
+							<tr><td>收货人电话</td><td><input type="text" name="addtell"></td></tr>
+							<tr><td>收货人地址</td><td><textarea name="add-add"></textarea></td></tr>
+						</table>
+						<input type="button" id="addbutton" value="确认"> <input id="addback" type="reset" value="取消" />
+					</form>
+				</div>
+			</div>
+			<!--*******************************************分割线*********************************************************-->
+			<!--猜你喜欢-->
+			<div id="lunbo" style="height: 420px;width: 1035px;border:1px solid black ;margin-top:40px;margin-left: 25px;">
+				<!--标题-->
+				<div style="background-color: gainsboro;height: 40px;margin-top: 0px;width: 1035px;">
+					<p style="font-size: 20px; margin-left: 10px;line-height: 36px;">猜你喜欢</p>
+				</div>
+				<!--轮播广告-->
+				<div class="layui-carousel" style="cursor:pointer">
+					<div class="pic">
+						<div class="picImg"><img src="img/1-1.png"width="1035px"height="360px" title="设计完美空间,彰显叶之居家"></div>
+						<div class="picImg"><img src="img/1-2.jpg"width="1035px"height="360px" title="享受生活远离喧嚣,北海叶之装饰"></div>
+						<div class="picImg"><img src="img/1-3.jpg"width="1035px"height="360px" title="装的是品质,饰的是格调"></div>
+						<div class="picImg"><img src="img/1-4.jpg"width="1035px"height="360px" title="以精心为创,以品质为美"></div>
+						<div class="picImg"><img src="img/1-5.jpg"width="1035px"height="360px" title="格调是你的,让别人羡慕去吧"></div>
+					</div>
+					<ul class="tabs">
+						<li class="bg"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="btn btn1">&lt;</div>
+					<div class="btn btn2">&gt;</div>
+				</div>
+			</div>
+			<!---->
+		</div>
+	</section>	
+	<iframe class="ifr-two" src="iframe/foot.html" frameborder="0" scrolling="no"></iframe>
+</body>
+<script>
+//导航栏显示与隐藏div显示与隐藏
+function xs(){document.getElementById("service").style.display="block"}
+function yc(){document.getElementById("service").style.display="none"}
+//个人中心信息获取
+var id_ID ; //客户账号
+var useremail;
+var member;//会员
+var SA_name;
+var SA_add;
+var SA_tell;
+var SA_id;//收获地址 id
+var exit="注销";
+$(function(){
+//	$("#").click(function(){
+				$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+						};
+					}
+				});
+		
+		$.ajax({
+			url:'cc.aa',
+			type:'get',
+			async:false,
+			success:function(data){
+				var obj = JSON.parse(data);
+				id_ID=obj[0].id;
+				useremail=obj[0].email;
+				member=obj[0].member;
+				$("#userName").text(obj[0].name);
+				$("#login-exit").text(exit);
+				$("#userNum").text(obj[0].lenvel-1+"/"+obj[0].lenvel);
+				$("#userValue").text("等级"+obj[0].lenvel);
+				$("#jifen").text(obj[0].total);
+				$(".leaf-login").text(obj[0].name);
+				$("#member").text(obj[0].member);
+				
+				//**********进度条********************	
+				var progress_node_id = "progress"; 
+			 	function SetProgress(progress) { 
+					if (progress) { 
+					   $("#" + progress_node_id + " > span").css("width", String(progress) + "%"); //进度条
+					   $("#" + progress_node_id + " > span").html(String(progress) + "%"); //数值
+					} 
+			 	} 
+			 	var i = obj[0].total;
+			 	var y;
+			 	if(i>0&&i<2100){y=100;}
+			 	if(i>=100&&i<300){y=300;i=parseInt(i*100/300)}
+			 	if(i>=300&&i<700){y=700;i=parseInt(i*100/700)}
+				function doProgress() { 
+					if (i > y) { 
+					  alert("恭喜你升级了"); 
+					  return; 
+					} 
+				 	if (i <= y) { 
+				 		SetProgress(i);
+				 	} 
+				} 
+				$(document).ready(function() { 
+				  	doProgress(); 
+				}); 
+				
+			},
+			error:function(data){
+				var obj=JSON.parse(data);
+					alert(obj);
+			}
+		});	
+//	});
+
+});
+//图片轮播
+var i=0;
+var Timer;
+$(function(){
+	$(".picImg").eq(0).show().siblings().hide();
+	//自动轮播
+	TimerBanner();
+	//点击红圈
+	$(".tabs li").hover(function(){  //鼠标移动上去
+		clearInterval(Timer);
+		i=$(this).index();
+		showPic();
+	},function(){  //鼠标离开
+		TimerBanner();
+	});
+	//点击左右按钮
+	$(".btn1").click(function(){
+		clearInterval(Timer);
+		i--;
+		if(i==-1){
+			i=4;
+		}
+		showPic();
+		TimerBanner();
+	});
+	$(".btn2").click(function(){
+		clearInterval(Timer);
+		i++;
+		if(i==5){
+			i=0;
+		}
+		showPic();
+		TimerBanner();
+	});
+});
+function TimerBanner(){
+	Timer = setInterval(function(){
+		i++;
+		if(i==5){
+			i=0;
+		}
+		showPic()
+	},2000);
+}
+function showPic(){
+	$(".picImg").eq(i).show().siblings().hide();
+	$(".tabs li").eq(i).addClass("bg").siblings().removeClass("bg");
+}
+
+//*********************************************************
+$(function(){
+	//账号信息div显示与隐藏
+	$("#idxinxi").click(function(){
+		$("#ziye").text(">账号信息");
+		$("#grzx").hide();
+		$("#dzxx").hide();
+		$("#zhxx").show();
+		$("#list").show();
+		$("#jibenziliao").css("background-color","#F2F2F2");
+		$("#ganxingqu").css("background-color","darkgray");
+		$("#mybaby").css("background-color","darkgray");
+		
+		//小标题的背景颜色
+		$("#ganxingqu").click(function(){
+			$("#ganxingqu").css("background-color","#F2F2F2");
+			$("#jibenziliao").css("background-color","darkgray");
+			$("#mybaby").css("background-color","darkgray");
+		});
+		$("#mybaby").click(function(){
+			$("#mybaby").css("background-color","#F2F2F2");
+			$("#jibenziliao").css("background-color","darkgray");
+			$("#ganxingqu").css("background-color","darkgray");
+		});
+		$("#jibenziliao").click(function(){
+			$("#jibenziliao").css("background-color","#F2F2F2");
+			$("#ganxingqu").css("background-color","darkgray");
+			$("#mybaby").css("background-color","darkgray");
+		});
+		//点击交易管理
+		$("#jiaoyiguanli").click(function(){
+			$("#ziye").text(">订单信息");//子页信息
+			$("#orderList").show();
+			$(".list").hide();//左侧广告隐藏
+			$("#grzx").hide();//右侧div隐藏
+			$("#dzxx").hide();//地址信息隐藏
+		});
+		//显示客户的邮箱  账号(不可修改的)
+		$("#userID").text(id_ID);
+		$("#useremail").text(useremail);
+	});
+	//个人中心div显示与隐藏
+	$("#gerenzhongxin").click(function(){
+		$("#ziye").text(">个人中心");
+		$("#grzx").show();
+		$("#zhxx").hide();
+		$("#dzxx").hide();
+	});
+});
+</script>
+
+<script>
+//********************//收货地址显示与隐藏
+
+$(function(){
+	$("#dizhiguanli").click(function(){
+		$("#ziye").text(">地址管理");
+		$("#grzx").hide();
+		$("#zhxx").hide();
+		$("#dzxx").show();
+		$("#orderList").hide();
+		$("#getBaby-hvaeAdd").css("background-color","#F2F2F2");
+	$.get("dd.aa",function(data){
+		var obj = JSON.parse(data);
+		var option1 ;var option2 ;var option3 ;var option4 ;var option5 ;
+		
+		if(obj[0].username!=null){option1="修改";}
+		else if(obj[1].username!=null){option2="修改";}
+		else if(obj[2].username!=null){option3="修改";}
+		else if(obj[3].username!=null){option4="修改";}
+		else if(obj[4].username!=null){option5="修改";}
+		else{option1="";option2="";option3="";option4="";option5="";}
+		SA_name1 = obj[0].username;
+		SA_tell1 = obj[0].usertell;
+		SA_add1 = obj[0].useradd;
+		SA_id1 = obj[0].userid;
+		//删除收件人  
+		$("#del-one1").click(function(){
+			alert("收货地址删除中...");
+			$.get("dd.aa?tell="+obj[0].addid,function(){
+				alert("删除成功");
+			},false);
+			
+		});
+		
+		
+		this.index
+		//修改收货人信息
+		$("#upd-one1").click(function(){
+			//给修改页面一个隐藏输入框赋值
+			$("#Upd-recipients").val(obj[0].addid);
+			alert("进入收件人信息修改页面");
+			$("#Upd-add").show();
+			$("#show-add").hide();
+			$("#getBaby-address").css("background-color","#F2F2F2");
+			$("#getBaby-hvaeAdd").css("background-color","darkgray");
+			$.get("bb.aa?tell="+obj[0].addid,function(){
+				
+			},false);
+		});
+		
+		//收件人的地址
+		$("#showadd-one-id").text(SA_id1);$("#showadd-one-name").text(SA_name1);$("#showadd-one-tell").text(SA_tell1);$("#showadd-one-add").text(SA_add1);
+		$("#showadd-two-id").text(obj[1].userid);$("#showadd-two-name").text(obj[1].username);$("#showadd-two-tell").text(obj[1].usertell);$("#showadd-two-add").text(obj[1].useradd);
+		$("#showadd-three-id").text(obj[2].userid);$("#showadd-three-name").text(obj[2].username);$("#showadd-three-tell").text(obj[2].usertell);$("#showadd-three-add").text(obj[2].useradd);
+		$("#showadd-four-id").text(obj[3].userid);$("#showadd-four-name").text(obj[3].username);$("#showadd-four-tell").text(obj[3].usertell);$("#showadd-four-add").text(obj[3].useradd);
+		$("#showadd-five-id").text(obj[4].userid);$("#showadd-five-name").text(obj[4].username);$("#showadd-five-tell").text(obj[4].usertell);$("#showadd-five-add").text(obj[4].useradd);
+		
+		
+		
+		
+		
+// 		for(let i=0;i<obj.length;i++){
+// 			$("#showadd").append("<tr><td class=\"showadd-id\">"+obj[i].userid+"</td><td class=\"showadd-name\">"+obj[i].username+"</td><td class=\"showadd-tell\">"+obj[i].usertell+"</td><td class=\"showadd-add\">"+obj[i].useradd+"</td></tr>");
+// 		}
+	},false);
+	
+	
+	
+	//点击添加收货地址
+	$("#getBaby-address").click(function(){
+		$("#Upd-add").show();
+		$("#show-add").hide();
+		$("#getBaby-address").css("background-color","#F2F2F2");
+		$("#getBaby-hvaeAdd").css("background-color","darkgray");
+	});
+	//点击查看收货地址
+	$("#getBaby-hvaeAdd").click(function(){
+		$("#getBaby-hvaeAdd").css("background-color","#F2F2F2");
+		$("#getBaby-address").css("background-color","darkgray");
+		$("#Upd-add").hide();
+		$("#show-add").show();
+	});
+});
+})
+</script>
+<script>
+//客户地址修改
+$(function(){
+		$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+							location.href="login.html"
+						};
+					}
+			});
+			$.ajax({
+				type:"get",
+				url:"engine/spcb.spcb",
+				async:false,
+				dataType:'json',
+				success:function(data){
+					var obj=eval(data);
+					let Cnum = obj.Cnum;
+					$("#cart_num").html(Cnum);
+				}
+			});	
+	$("#addbutton").click(function(){
+		$.ajax({
+			url:'bb.aa',
+			type:'get',
+			async:false,
+			data:$("#address").serialize(),
+			success:function(data){
+				var obj=JSON.parse(data);
+				if(obj.status=="0000"){
+					alert("添加成功");
+					$("#getBaby-hvaeAdd").css("background-color","#F2F2F2");
+					$("#getBaby-address").css("background-color","darkgray");
+					$("#Upd-add").hide();
+					$("#show-add").show();
+				}else if(obj.status=="1111"){
+					alert("添加失败");
+				}else if(obj.status=="2222"){
+					alert("修改成功");
+					$("#getBaby-hvaeAdd").css("background-color","#F2F2F2");
+					$("#getBaby-address").css("background-color","darkgray");
+					$("#Upd-add").hide();
+					$("#show-add").show();
+				}else if(obj.status=="3333"){
+					alert("修改失败");
+				}
+			},
+			error:function(data){
+				alert("Sorry,operation failure!");
+			}
+		});
+	});
+	//取消提交
+	$("#addback").click(function(){
+		$("#getBaby-hvaeAdd").css("background-color","#F2F2F2");
+		$("#getBaby-address").css("background-color","darkgray");
+		$("#Upd-add").hide();
+		$("#show-add").show();
+	});
+});
+//客户头像修改
+$(function(){
+	$("#sp-two").click(function(){
+		alert("修改头像");
+		//$("#sp-two").attr("src","/YXCopy/img/2.jpeg");
+		window.location.href="File.html";
+		 
+	
+
+// 		document.getElementById("sp-two").style.backgroundImage="url()
+	});
+});
+//客户信息修改
+$(function(){
+	$("#btn-user").click(function(){
+		$.ajax({
+			url:'aa.aa',
+			type:'get',
+			async:false,
+			data:$("#form1").serialize(),
+			//contenttype:"application/x-www-form-urlencoded",
+			success:function(data){
+				var obj=JSON.parse(data);
+				if(obj.status=="0001"){
+					alert("修改成功");
+				}else{
+					alert("修改失败");
+				}
+			},
+			error:function(){
+				alert("Sorry,operation failure!");
+			}
+		});
+	});
+});
+</script>
+<!-- 订单信息********************************************************************** -->
+<script type="text/javascript">
+
+$(function(){
+	var sum ;//订单总量
+	var page=1;//页数
+	var UserShopname;//商品名字
+	var UserShopnum;//件数
+	var UserDate;//日期
+	var UserMoney;//总价
+	var UserUnitPrice;//单价
+	var UserRemark;//备注信息
+	var UserStatus;//订单状态
+	var UserOrderId;//订单编号
+	var shopImg;//图片地址
+	$.get('ee.aa?page=1',function(data){
+		var obj=JSON.parse(data);
+		sum = obj[0].sum[0].sum
+		
+		if(sum%4==0){page=parseInt(sum/4)}
+		if(sum%4!=0){page=parseInt(sum/4)+1}
+		shopImg= obj[0].two[0].shopImg;
+		UserShopname = obj[0].two[0].shopName;
+		UserUnitPrice=obj[0].two[0].ShopUnitPrice;
+		UserShopnum  = obj[0].one[0].UserShopnum;
+		UserDate   = obj[0].one[0].UserDate;
+		UserMoney  = obj[0].one[0].UserMoney;
+		UserRemark = obj[0].one[0].UserRemark;
+		UserOrderId = obj[0].one[0].UserOid;
+		if(obj[0].one[0].UserStatus==1){UserStatus ="待付款";}
+		else if(obj[0].one[0].UserStatus==2){UserStatus ="待发货";
+		}else if(obj[0].one[0].UserStatus==3){UserStatus ="待收货";
+		}else if(obj[0].one[0].UserStatus==4){UserStatus ="已收货";
+		}else{UserStatus ="订单状态获取失败";}
+		var i=1;
+		//页数显示
+//		$("#sumPage").text("共"+page+"页");
+//		//首页
+//		$("#firstPage").click(function(){
+//			alert("diajishouye");
+//			$.get("ee.aa?page=1",function(){
+//				alert("send");
+//			},false);
+//		});
+//		//尾页
+//		$("#endPage").click(function(){
+//			alert("尾页");
+//			$.get("ee.aa?page="+page,function(){
+//				alert("send");
+//			},false);
+//		});
+//		//上一页
+//		$("#onPage").click(function(){
+//			alert("上一页");
+//			$.get("ee.aa?page="+(i-1),function(){
+//// 				alert("send");
+//			},false);
+//		});
+//		//下一页
+//		$("#nextPage").click(function(){
+//			alert("下一页");
+//			$.get("ee.aa?page="+(i+1),function(data){
+//
+//// 				var obg = JSON.parse(data);
+//				
+//// 				$("#tab1").html("<tr class=\"List-order\"><td>"+obj[0].one[0].UserOid+"</td><td>"+obj[0].one[0].UserDate+"</td><td><img src='/YXCopy/"+obj[0].two[0].shopImg+"' width=80 height=80 /></td><td>"+obj[0].two[0].shopName+"</td><td>"+obj[0].two[0].ShopUnitPrice+"</td><td>"+obj[0].one[0].UserShopnum+"</td><td>"+obj[0].one[0].UserMoney+"</td><td>"+UserStatus+"</td><td>"+obj[0].one[0].UserRemark+"</td><td id=\"del"+0+"\">删除</td></tr>");
+//				
+//// 				for(var i=1;i<obg[0].one.length;i++){
+//// 					alert(obg[0].one[i].UserRemark);
+//// 					$(".List-order").after("<tr><td>"+obg[0].one[i].UserOid+"</td><td>"+obg[0].one[i].UserDate+"</td><td><img src='/YXCopy/"+obg[0].two[i].shopImg+"' width=80 height=80 /></td><td>"+obg[0].two[i].shopName+"</td><td>"+obg[0].two[i].ShopUnitPrice+"</td><td>"+obg[0].one[i].UserShopnum+"</td><td>"+obg[0].one[i].UserMoney+"</td><td>"+UserStatus+"</td><td>"+obg[0].one[i].UserRemark+"</td><td id=\"del"+i+"\">删除</td></tr>");
+//// 				}
+//// 				alert("send");
+//			});
+//		});
+//		
+//		//分页
+//		$("#iPage").text("第"+i+"页");
+		
+		//单个订单显示
+		$("#Head-Time").text(UserDate);
+		$("#Head-Id").text("订单编号:"+UserOrderId);
+		$("#ShopName").text(UserShopname);
+		$("#ShopNum").text(UserShopnum);
+		$("#ShopUnitPrice").text(UserUnitPrice);//单价
+		$("#ShopAllPrice").text(UserMoney);
+		$("#ShopRemark").text(UserRemark);
+		$("#ShopStatus").text(UserStatus);
+		$("#ShopImg").attr("src",shopImg);
+		
+		//大div*********************************************************
+		$("#allOrder,#Head-Remove,#Order-guanli,#jiaoyiguanli").click(function(){
+			
+			$("#ziye").text(">订单信息");//子页信息
+			$("#orderList").show();
+			$(".list").hide();//左侧广告隐藏
+			$("#grzx").hide();//右侧div隐藏
+			$("#dzxx").hide();//地址信息隐藏
+			
+			//地址管理
+			$("#dizhiguanli").click(function(){
+				$("#ziye").text(">地址管理");
+				$("#grzx").hide();
+				$("#zhxx").hide();
+				$("#dzxx").show();
+				$("#orderList").hide();
+				$(".list").show();//左侧广告显示
+			});
+			
+			
+			
+			//$("#lunbo").hide();//轮播div隐藏
+// 			alert(tab.rows.length);//表格行数
+// 			var hang_biaoge = tab.rows.length-1;
+// 			alert(hang_biaoge+"biao");
+// 			var hang_houtai = obj[0].two.length;
+// 			if(hang_biaoge>hang_houtai){
+// 				$("#order-img-").attr("src","/YXCopy/"+obj[0].two[0].shopImg);
+// 			}
+			
+				//多个订单显示
+				
+			
+// 			for(var i=0;i<obj[0].one.length;i++){
+// 				$("#tab1").append("<tr class=\"List-order\"><td>"+obj[0].one[i].UserOid+"</td><td>"+obj[0].one[i].UserDate+"</td><td><img src='/YXCopy/"+obj[0].two[i].shopImg+"' width=80 height=80 /></td><td>"+obj[0].two[i].shopName+"</td><td>"+obj[0].two[i].ShopUnitPrice+"</td><td>"+obj[0].one[i].UserShopnum+"</td><td>"+obj[0].one[i].UserMoney+"</td><td>"+UserStatus+"</td><td>"+obj[0].one[i].UserRemark+"</td><td id=\"del"+i+"\">删除</td></tr>");
+				
+// 			}
+				
+			if(obj[0].one[1].UserStatus==1){UserStatus ="待付款";}
+			else if(obj[0].one[1].UserStatus==2){UserStatus ="待发货";
+			}else if(obj[0].one[1].UserStatus==3){UserStatus ="待收货";
+			}else if(obj[0].one[1].UserStatus==4){UserStatus ="已收货";
+			}else{UserStatus ="订单状态获取失败";}
+			
+			$("#order-id-1").text(obj[0].one[0].UserOid);
+			$("#order-data-1").text(obj[0].one[0].UserDate);
+			$("#order-img-1").attr("src",obj[0].two[0].shopImg);
+			$("#order-message-1").text(obj[0].two[0].shopName);
+			$("#order-price-1").text(obj[0].two[0].ShopUnitPrice);
+			$("#order-num-1").text(obj[0].one[0].UserShopnum);
+			$("#order-money-1").text(obj[0].one[0].UserMoney);
+			$("#order-status-1").text(UserStatus);
+			$("#order-remark-1").text(obj[0].one[0].UserRemark);
+			
+			$("#order-id-2").text(obj[0].one[1].UserOid);
+			$("#order-data-2").text(obj[0].one[1].UserDate);
+			$("#order-img-2").attr("src",obj[0].two[1].shopImg);
+			$("#order-message-2").text(obj[0].two[1].shopName);
+			$("#order-price-2").text(obj[0].two[1].ShopUnitPrice);
+			$("#order-num-2").text(obj[0].one[1].UserShopnum);
+			$("#order-money-2").text(obj[0].one[1].UserMoney);
+			$("#order-status-2").text(UserStatus);
+			$("#order-remark-2").text(obj[0].one[1].UserRemark);
+			
+	
+			if(obj[0].one[2].UserStatus==1){UserStatus ="待付款";}
+			else if(obj[0].one[2].UserStatus==2){UserStatus ="待发货";
+			}else if(obj[0].one[2].UserStatus==3){UserStatus ="待收货";
+			}else if(obj[0].one[2].UserStatus==4){UserStatus ="已收货";
+			}else{UserStatus ="订单状态获取失败";}
+			
+			$("#order-id-3").text(obj[0].one[2].UserOid);
+			$("#order-data-3").text(obj[0].one[2].UserDate);
+			$("#order-img-3").attr("src",obj[0].two[2].shopImg);
+			$("#order-message-3").text(obj[0].two[2].shopName);
+			$("#order-price-3").text(obj[0].two[2].ShopUnitPrice);
+			$("#order-num-3").text(obj[0].one[2].UserShopnum);
+			$("#order-money-3").text(obj[0].one[2].UserMoney);
+			$("#order-status-3").text(UserStatus);
+			$("#order-remark-3").text(obj[0].one[2].UserRemark);
+			
+			
+			if(obj[0].one[3].UserStatus==1){UserStatus ="待付款";}
+			else if(obj[0].one[3].UserStatus==2){UserStatus ="待发货";
+			}else if(obj[0].one[3].UserStatus==3){UserStatus ="待收货";
+			}else if(obj[0].one[3].UserStatus==4){UserStatus ="已收货";
+			}else{UserStatus ="订单状态获取失败";}
+			
+			$("#order-id-4").text(obj[0].one[3].UserOid);
+			$("#order-data-4").text(obj[0].one[3].UserDate);
+			$("#order-img-4").attr("src",obj[0].two[3].shopImg);
+			$("#order-message-4").text(obj[0].two[3].shopName);
+			$("#order-price-4").text(obj[0].two[3].ShopUnitPrice);
+			$("#order-num-4").text(obj[0].one[3].UserShopnum);
+			$("#order-money-4").text(obj[0].one[3].UserMoney);
+			$("#order-status-4").text(UserStatus);
+			$("#order-remark-4").text(obj[0].one[3].UserRemark);
+			
+			//************************分割线**下面是删除按钮*************************
+			$("#order-del-1").click(function(){
+				alert("订单删除中...");
+			 	$("#list-order-1").remove();
+			 	$.get("ee.aa?id="+obj[0].one[0].UserOid,function(){},false);
+			 });
+			$("#order-del-2").click(function(){
+				alert("订单删除中...");
+			 	$("#list-order-2").remove();
+			 	$.get("ee.aa?id="+obj[0].one[1].UserOid,function(){},false);
+			 });
+			$("#order-del-3").click(function(){
+				alert("订单删除中...");
+				$.get("ee.aa?id="+obj[0].one[2].UserOid,function(){},false);
+			 	$("#list-order-3").remove();
+			 });
+			$("#order-del-4").click(function(){
+				alert("订单删除中...");
+				$.get("ee.aa?id="+obj[0].one[3].UserOid,function(){},false);
+			 	$("#list-order-4").remove();
+			 });
+			
+			
+		});
+		
+		$("#gerenzhongxin").click(function(){
+			$("#ziye").text(">个人中心");//个人中心信息
+			$("#orderList").hide(); //大订单div隐藏
+			$(".list").show();//左侧广告显示
+			$("#grzx").show();//右侧div显示
+		});
+		
+		
+		
+		
+	},false);
+	
+});
+</script>
+</html>

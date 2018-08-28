@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Admin登陆</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script type="text/javascript" src="layui/layui.all.js" ></script>
+		<script type="text/javascript" src="layui/lay/modules/layer.js" ></script>
+		<style>
+			#admin_form{margin-top: 80px;}
+		</style>
+	</head>
+	<body class="layui-body" style="background-image: url(images/322048.jpg);">
+		
+		<div class="layui-container">
+			
+			<div class="layui-row">
+				<div class="layui-col-lg8 layui-col-lg-offset1" 
+					style="height: 500px;margin-top: 200px;">
+				<div class="layui-col-lg12" style="height: 50px;color:white;line-height: 50px;text-align: center;font-size:72px;letter-spacing: 20px;">admin登陆</div>
+				<form class="layui-form layui-col-lg12 layui-col-lg-offset1 layui-form-pane" id="admin_form">
+				  <div class="layui-form-item">
+				    <div class="layui-input-block layui-col-lg6">
+				      <input type="text" name="adminid" autocomplete="off" style="height: 50px;" 
+				      	placeholder="请输入admin账号" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item" style="margin-top: 50px;">
+				    <div class="layui-input-block layui-col-lg6">
+				      <input type="password" name="adminpwd" style="height: 50px;" autocomplete="off" placeholder="请输入admin密码" class="layui-input">
+				    </div>
+				    </div>
+				 </form>
+				 <div class="layui-btn-container layui-col-lg5" style="margin-left: 205px;margin-top: 50px;">
+				 	<button type="button" type="button" id="admin_login" class="layui-btn layui-btn-normal layui-btn-fluid">登陆</button>
+				 </div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+	</body>
+	<script src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#admin_login").click(function() {
+			$.ajax({
+    			url:'adminLogin',
+    			type:'post',
+    			data:$("#admin_form").serialize(),
+    			async:'false',
+    			contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+    			success:function(data){
+    				var obj=JSON.parse(data);
+    				if (obj.code=="0000") {
+						layer.msg("登陆成功");
+						location.href="liang/index.html";
+					}else if(obj.code=="0004"){
+						layer.msg("账号或者密码不正确");
+					}else if(obj.code=="0003"){
+						layer.msg("账号不存在");
+					}else{
+						layer.msg("未知的错误");
+					}
+    			},
+    			error:function(){
+    				layer.msg("error");
+    			}
+			});
+			
+		});
+	});	
+	</script>
+</html>

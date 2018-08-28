@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>leaf装饰</title>
+	</head>
+	<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+	<script type="text/javascript" src="js/jquery.colorbox-min.js" ></script>
+	<script type="text/javascript" src="js/zzsc.js" ></script>
+	<script type="text/javascript" src="js/index.js" ></script>
+	<link rel="stylesheet" href="css/zzsc.css" />
+	<link rel="stylesheet" href="iframe/css/head.css" />
+	<link rel="stylesheet" href="iframe/css/navigation.css" />
+	<link rel="stylesheet" href="css/details.css" />
+	<body>
+		<header>
+			<nav>
+				<div class="nav-l">
+					<div style="margin-left:0;">
+						<div>
+							<a href="index.html" target="_blank">美丽家-魅力家-叶之家具</a>
+						</div>
+					</div>
+					<div>
+						<div>
+							<div>
+								<ul>
+									<li>
+										<a href="F" target="_blank">七夕系列饰品上线特惠</a>
+									</li>
+									<!--<li>
+										<a href="" target="_blank">【严选x中行联名卡】达标领80元礼品卡&gt;</a>
+									</li>
+									<li>
+										<a href="" target="_blank">【福利】下载严选APP，抢1元包邮团，领...</a>
+									</li>
+									<li>
+										<a  href="" target="_blank">七夕系列饰品上线特惠</a>
+									</li>-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="nav-r">
+					<div>
+						<div id="nar_lr" style="display: block;">
+							<div class="navr-lr">
+								<div>
+									<div id="login" class="" onclick="window.location='login.html'" title="leaf登录">登录</div>
+								</div>
+							</div>
+							<div class="navr-lr" style="margin-left:20px;">
+								<div >
+									<div onclick="window.location='regin.html'">注册</div>
+								</div>
+							</div>
+						</div>
+						<div id="user" style="display: none;">
+							<div onmouseout="yc()" onmouseover="xs()" style="">
+								<a href=""><div id="user_name" style="text-align: center;overflow: hidden;">123456</div></a>
+							</div>
+							<div id="service" onmouseout="yc()" onmouseover="xs()" class="navr-btn-tan">
+								<a href="Personal.html"><div style="border-bottom: 0.5px solid #999 ;">个人中心</div></a>
+								<a href="ShopCart.html"><div style="border-bottom: 0.5px solid #999 ;">购物车</div></a>
+								<a href="index.EXIT"><div id="exit">退出</div></a>
+							</div>
+						</div>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a href="Personal.html" target="_blank">我的订单</a>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">会员</a></div>
+					<div class="navr-btn">|</div>
+					<div><a da target="_blank">甄选家居</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">企业采购</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">客服中心</a></div>
+				</div>	
+			</nav>
+		</header>
+		<section class="sec-nav">
+			<article class="sec-nav-art">
+				<section class="log"><img src="img/log.png" style="width: 240px;height: auto;"></section>
+				<div class="form">
+					<form action="" method="get">
+						<input type="text" id="search" class="search" />
+						<button></button>
+					</form>
+				</div>
+				<a href="ShopCart.html" target="_blank"><div class="cart-pic">
+					<div id="cart_num" class="cart-pic-num">0</div>
+				</div></a>
+			</article>
+			<nav class="nav-zhu">
+				<article class="container">
+					<ul class="nav" style="padding-left: 0;">
+						<li><a href="index.html" target="_blank">首页</a></li>
+						<li>
+							<a href="commodity.html?fl=dgzm" target="_blank">灯饰照明</a>
+							<ul>
+								<li>
+									<a href="#" target="_blank">风格灯饰</a>
+									<ul>
+										<li><a href="#" target="_blank">简易现代灯</a></li>
+										<li><a href="#" target="_blank">现代中式灯</a></li>
+										<li>
+											<a href="#" target="_blank">田园风格灯</a>
+											<!--<ul>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+												<li><a href="#" target="_blank">Level 3</a></li>
+											</ul>-->
+										</li>
+										<li><a href="#" target="_blank">美式乡村灯</a></li>
+									</ul>
+								</li>
+								<li><a href="#" target="_blank">吸顶灯</a></li>
+								<li><a href="#" target="_blank">客厅灯</a></li>
+								<li><a href="#" target="_blank">卧室灯</a></li>
+								<li><a href="#" target="_blank">台灯</a></li>
+								<li><a href="#" target="_blank">浴霸</a></li>
+								<li><a href="#" target="_blank">简灯</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=cfwy" target="_blank">厨房卫浴</a>
+							<ul>
+								<li><a href="#" target="_blank">风格灯饰</a></li>
+								<li><a href="#" target="_blank">龙头</a></li>
+								<li><a href="#" target="_blank">浴室柜</a></li>
+								<li><a href="#" target="_blank">厨房置物架</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=wjgj" target="_blank">五金工具</a>
+							<ul>
+								<li><a href="#" target="_blank">工具箱</a></li>
+								<li><a href="#" target="_blank">锁具</a></li>
+								<li><a href="#" target="_blank">家用五金</a></li>
+								<li><a href="#" target="_blank">合页</a></li>
+								<li><a href="#" target="_blank">电动工具</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=dzdg" target="_blank">电子电工</a>
+							<ul>
+								<li><a href="#" target="_blank">开关</a></li>
+								<li><a href="#" target="_blank">插座</a></li>
+								<li><a href="#" target="_blank">智能家居</a></li>
+								<li><a href="#" target="_blank">转换器</a></li>
+								<li><a href="#" target="_blank">电线</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=jcjc" target="_blank">基础建材</a>
+							<ul>
+								<li><a href="#" target="_blank">瓷砖</a></li>
+								<li><a href="#" target="_blank">油漆</a></li>
+								<li><a href="#" target="_blank">地板</a></li>
+								<li><a href="#" target="_blank">地板</a></li>
+								<li><a href="#" target="_blank">施工材料</a></li>
+								<li><a href="#" target="_blank">墙地面材料</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="commodity.html?fl=dzzx" target="_blank">定制装修</a>
+							<ul>
+								<li><a href="#" target="_blank">定制柜类</a></li>
+								<li><a href="#" target="_blank">橱柜定制</a></li>
+								<li><a href="#" target="_blank">榻榻米</a></li>
+								<li><a href="#" target="_blank">门</a></li>
+							</ul>
+						</li>
+						<li>
+							<a target="_blank">叶之家装</a> 
+							<!--href="commodity.html?fl="-->
+							<ul>
+								<li><a href="#" target="_blank">全套家装</a></li>
+								<li><a href="#" target="_blank">二手改造</a></li>
+								<li><a href="#" target="_blank">装修设计</a></li>
+							</ul>
+						</li>
+					</ul>
+				</article>
+			</nav>
+		</section>
+		<section class="com-det">
+			<article style="font-size: 14px;line-height: 25px; margin: 10px auto;">
+				<span>首页&nbsp;>&nbsp;</span>
+				<span id="bigclass" style="color: #999;"></span>
+				<span id="smallclass" style="color: #999;"></span>
+				<span id="cremark" style="color: #999;"></span>
+			</article>
+			<section class="com-det-center">
+				<section class="com-det-img">
+					<div class="con-FangDa" id="fangdajing">
+						<div class="con-fangDaIMg">
+							<!-- 正常显示的图片-->
+							<img id="mag_mr" src="">
+							<!-- 滑块-->
+							<div class="magnifyingBegin"></div>
+							<!-- 放大镜显示的图片 -->
+							<div class="magnifyingShow"><img id="mag_mr_big" src=""></div>
+						</div>
+		
+						<ul class="con-FangDa-ImgList">
+							<!-- 图片显示列表 -->
+							<li class="active"><img id="mag_gl_0" src="" data-bigimg=""></li>
+							<li><img id="mag_gl_1" src="" data-bigimg=""></li>
+							<li><img id="mag_gl_2" src="" data-bigimg=""></li>
+							<li><img id="mag_gl_3" src="" data-bigimg=""></li>
+							<li><img id="mag_gl_4" src="" data-bigimg=""></li>
+						</ul>
+					</div>
+				</section>
+				<section class="com-det-tit">
+					<div class="cd-tit-qt">
+						<div id="name" style="font-size: 24px; font-weight: 600;line-height: 36px;">商品名</div>
+						<div id="brand" style="font-size: 14px;color: #999;margin-bottom: 10px;">123456</div>
+						<div class="cd-tit-pr" style="background-color: #f5f3ef;border-top: 1px dotted #dedede; border-bottom: 1px dotted #dedede;">
+							<div class="small-tit">
+								<div style="margin-bottom: 15px;">价格</div>
+								<div style="margin-bottom: 8px;">领劵</div>
+								<div style="line-height: 34px;border-bottom: 1px dashed #d2d2d2;">积分</div>
+								<div style="margin: 10px 0;">服务</div>
+							</div>
+							<div class="big-tit">
+								<div style="color: red;font-weight: 600;margin-top: 5px;">￥<span id="price" style="font-size: 30px;">5000</span></div>
+								<div class="big-tit-qu">
+									<div>400元直减券</div>
+									<div>全场每满219减21</div>
+									<div style="border: none;"><a href="#" style="color: red; line-height: 15px;" target="_blank">立即领劵&nbsp;></a></div>
+								</div>
+								<div style="color: #999;font-size: 14px;line-height:34px;margin-top: 11px; border-bottom: 1px dashed #d2d2d2;width: 100%;">购买最高的获得<span id="integral">500</span>积分</div>
+								<div class="big-tit-msg">
+									<span>支持7天无忧退换货</span><i>/</i>
+									<span>48小时快速退款</span><i>/</i>
+									<span>满188元免邮费</span><i>/</i>
+									<span>国内部分地区无法配送</span>
+								</div>
+							</div>
+							<div>
+								<div class="small-tit" style="margin-top:50px;clear: both;">款式</div>
+								<div class="small-tit" style="margin-top:70px;clear: both;">数量</div>
+							</div>
+							<div class="s-tit-right">
+								<div class="str-img"><div></div><div></div></div>
+								<div class="str-num" style="clear: both;margin-top: 40px;">
+									<div id="num-sub" style="border-right: none;">-</div>
+									<div id="num" style="width: 60px;font-size: 16px;">1</div>
+									<div id="num-plus" style="border-left: none;">+</div>
+								</div>
+							</div>
+							<div class="str-btn" style="margin: 30px 15px 0;">
+								<div class="buybtn" id="buybtn" style="color: #999999;">立即购买</div>
+								<div id="shopcartbtn" class="addcart" style="background-color: #b4a078;color:white;">加入购物车</div>
+								<div id="collectbtn" style="width: 50px;font-size: 16px;">收藏</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="com-det-xq">
+				<section class="cd-xq-left">
+					<section class="menu" id="menu" style="width: 750px;">
+					<!--tag标题-->
+						<div class="tag-tit">
+							<ul id="tag-nav" class="tag-nav">
+						        <li><a class="selected">详情</a></li>
+						        <li><a class="">评价<span style="color: burlywood;">(<span>12</span>)</span></a></li>
+						        <li><a class="">常见问题</a></li>
+						    </ul>
+						</div>
+					<!--二级菜单-->
+					    <div id="menu_con">
+					        <div class="tag" style="display:block">
+					            详情页面
+					         </div> 
+					        <div class="tag" style="display:none">
+					            评论页面  
+					         </div> 
+					        <div class="tag"  style="display:none">
+					            帮助页面
+					        </div>
+					    </div>
+					</section>
+				</section>
+				<aside class="cd-xq-right">
+					<section class="menu" style="width: 300px;line-height: 42px;font-weight: 700;padding-bottom: 50px;">
+						<div class="tag-tit" style="text-align: center;">24小时热销榜</div>
+						<a href="#" target="_blank"><section class="deta-sec-sec">
+							<section class="dss-img">
+								<img id="hot_0" src="" width="100%" height="100%" />
+							</section>
+							<div id="hotname_0" class="com-name">0000</div>
+							<div class="com-pir">￥<span id="hotPrice_0"></span></div>
+						</section></a>
+						<a href="#" target="_blank"><section class="deta-sec-sec">
+							<section class="dss-img">
+								<img id="hot_0" src="" width="100%" height="100%" />
+							</section>
+							<div id="hotname_1" class="com-name">0000</div>
+							<div class="com-pir">￥<span id="hotPrice_1"></span></div>
+						</section></a>
+						<a href="#" target="_blank"><section class="deta-sec-sec">
+							<section class="dss-img">
+								<img id="hot_2" src="" width="100%" height="100%" />
+							</section>
+							<div id="hotname_2" class="com-name">0000</div>
+							<div class="com-pir">￥<span id="hotPrice_2"></span></div>
+						</section></a>
+						<a href="#" target="_blank"><section class="deta-sec-sec">
+							<section class="dss-img">
+								<img id="hot_3" src="" width="100%" height="100%" />
+							</section>
+							<div id="hotname_3" class="com-name">0000</div>
+							<div class="com-pir">￥<span id="hotPrice_3"></span></div>
+						</section></a>
+					</section>
+				</aside>
+			</section>
+		</section>
+		<iframe class="ifr-two" src="iframe/foot.html" frameborder="0" scrolling="no"></iframe>
+	</body>
+	<script>
+		function xs(){
+			document.getElementById("service").style.display="block"
+		}
+		function yc(){
+			document.getElementById("service").style.display="none"
+		}
+		var tabs=function(){
+		    function tag(name,elem){
+		        return (elem||document).getElementsByTagName(name);
+		    }
+		    //获得相应ID的元素
+		    function id(name){
+		        return document.getElementById(name);
+		    }
+		    function first(elem){
+		        elem=elem.firstChild;
+		        return elem&&elem.nodeType==1? elem:next(elem);
+		    }
+		    function next(elem){
+		        do{
+		            elem=elem.nextSibling;  
+		        }while(
+		            elem&&elem.nodeType!=1  
+		        )
+		        return elem;
+		    }
+		    return {
+		        set:function(elemId,tabId){
+		            var elem=tag("li",id(elemId));
+		            var tabs=tag("div",id(tabId));
+		            var listNum=elem.length;
+		            var tabNum=tabs.length;
+		            for(var i=0;i<listNum;i++){
+		                    elem[i].onclick=(function(i){
+		                        return function(){
+		                            for(var j=0;j<tabNum;j++){
+		                                if(i==j){
+		                                    tabs[j].style.display="block";
+		                                    //alert(elem[j].firstChild);
+		                                    elem[j].firstChild.className="selected";
+		                                }
+		                                else{
+		                                    tabs[j].style.display="none";
+		                                    elem[j].firstChild.className="";
+		                                }
+		                            }
+		                        }
+		                    })(i)
+		            }
+		        }
+		    }
+		}();
+		tabs.set("tag-nav","menu_con");//执行
+		
+		
+//		-----------------------AJAX---------------------------
+	var stta;
+	var cid = window.location.search;
+		$(function(){
+				$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+						};
+					}
+				});
+			//获取？后的数据
+			$.ajax({
+				type:"get",
+				url:'engine/details.caro'+cid,
+				dataType:'json',
+				success:function(data){
+					var obj=eval(data);
+					let ComInfo=obj.ComInfo;
+					let ComIMG=obj.ComIMG;
+					$("#bigclass").html((ComInfo[0].cbigclass)+"&nbsp;>&nbsp;");
+					$("#smallclass").html((ComInfo[0].cclassify)+"&nbsp;>&nbsp;");
+					$("#cremark").html(ComInfo[0].cremark);
+					$("#name").html(ComInfo[0].cremark);
+					$("#brand").html(ComInfo[0].cname);
+					$("#price").html(ComInfo[0].cprice);
+					let intgral= parseInt(parseFloat(ComInfo[0].cprice)*0.1);    
+					$("#integral").html(intgral);
+					$("#mag_mr").attr("src",ComIMG[0]);
+					$("#mag_mr_big").attr("src",ComIMG[0]);
+					$.each(ComIMG, function(i) {
+						let idIMG="#mag_gl_"+i;
+						$(idIMG).attr("src",ComIMG[i]);
+						$(idIMG).attr("data-bigimg",ComIMG[i]);
+					});
+				}
+			});
+			$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						stta = state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+						};
+					}
+				});
+			$.ajax({
+					type:'get',
+					url:'engine/cq.ning?cname=hot',
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						$.each(obj,function(i){
+							let idimg="#hot_"+i;
+							let iddiv="#hotname_"+i;
+							let idspan="#hotPrice_"+i;
+							$(idimg).attr("src",obj[i].Cimgurl);
+							$(iddiv).html(obj[i].cremark);
+							$(idspan).html(obj[i].cprice);
+						});
+					}
+				});
+				carnum();
+		});
+			
+		/************加入购物车的AJAX************/
+		function carnum(){
+			$.ajax({
+				type:"get",
+				url:"engine/spcb.spcb",
+				async:false,
+				dataType:'json',
+				success:function(data){
+					var obj=eval(data);
+					let Cnum = obj.Cnum;
+					$("#cart_num").html(Cnum);
+				}
+			});	
+		}
+		$(function() {
+			var num = 1;
+			$("#num-sub").on("click", function() {
+				if(num == 1) {
+					$("#num").html(num);
+				} else {
+					num--;
+					$("#num").html(num);
+				}
+			});
+			$("#num-plus").on("click", function() {
+				num++;
+				$("#num").html(num);
+			});
+			$("#shopcartbtn").on("click",function(){
+				let con = 'engine/spcb.spcb'+cid+'&num='+num;
+				if(stta=="0001"){
+					alert("请前往登录");
+					location.href="login.html";
+				}
+				if(stta=="0000"){
+					$.ajax({
+					type:"get",
+					url:con,
+					async:true,
+					dataType:'json',
+					contentType:'application/x-www-form-urlencoded',
+					success:function(data){
+						var obj=eval(data);
+						let Cnum = obj.Cnum;
+						$("#cart_num").html(Cnum);
+						if(obj.state=="0000"){
+							alert("添加成功");
+							carnum();
+						}else{
+							alert("添加失败");
+						}
+					},
+					error:function(data){
+						alert("出现错误");
+					}
+				});
+				}
+				carnum();
+			});
+		});
+	</script>
+</html>

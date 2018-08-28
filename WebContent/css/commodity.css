@@ -1,0 +1,234 @@
+*{
+	font-family: "微软雅黑";
+	margin: 0;
+}
+body{
+	background-color: #f5f5f5;
+}
+a:hover{
+	color: #32CD32;
+}
+div{
+	cursor: pointer;
+}
+iframe{
+	margin-top: 10px;
+	width: 100%;
+}
+.ifr-two{
+	height: 205px;
+}
+.sec-nav{
+	background-color: white;
+	box-shadow: 0 0.5px 0 #999;
+}
+.sec-center>article{
+	width: 1090px;
+}
+.carousel{
+	width: 1090px;
+	height: 400px;
+	margin: 0 auto;
+}
+.classify{
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 1010px;
+	padding: 10px 40px 0;
+	height: auto;
+	background-color: white;
+}
+.classify-top{
+	margin-top: 20px;
+	width: 1010px;
+	height: auto;
+	border-bottom: 0.5px solid #999999;
+	margin-bottom: 10px;
+}
+.classify-top section{
+	width: 100%;
+	height: 55px;
+	font-size: 20px;
+	border-bottom: 0.5px dashed #999;
+}
+.classify-tit{
+	font-size: 14px;
+	line-height: 50px;
+	float: left;
+	color: #999;
+}
+.classify-zt{
+	float: left;
+	font-size: 14px;
+	line-height: 50px;
+	height: 50px;
+}
+.classify-zt span{
+	margin-left: 20px;
+}
+.classify-zt span:hover{
+	color: #32CD32;
+}
+.classify-center{
+	width: 1010px;
+	height: auto;
+	padding-bottom: 30px;
+}
+.classify-com{
+	width: 1010px;
+	height: 1900px;
+}
+.cla-com-sub{
+	width: 244px;
+	height: 350px;
+	margin: 10px 3.75px 20px;
+	border: 0.1px solid #999;
+	float: left;
+}
+.cla-com-img{
+	width: 225px;
+	height: 225px;
+	margin: 10px;
+}
+.cla-com-tit{
+	width: 225px;
+	height: auto;
+	margin: 10px;
+}
+.cla-com-tit div{
+	width: 100%;
+	margin-bottom: 5px;
+	text-align: center;
+	clear: both;
+}
+.cla-com-tit div:nth-child(1){
+	font-size: 22px;
+	color: black;
+}
+.cla-com-tit div:nth-child(2){
+	font-size: 16px;
+	line-height:22px;
+	color: red;
+	border-bottom: 0.1px solid #999;
+}
+.cla-com-tit div:nth-child(3){
+	font-size: 14px;
+	color: #999;
+	line-height: 20px;
+}
+/*轮播CSS*/
+.flexslider {
+	margin: 0px auto 20px;
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.flexslider .slides li {
+	width: 100%;
+	height: 100%;
+}
+
+.flex-direction-nav a {
+	width: 70px;
+	height: 70px;
+	line-height: 99em;
+	overflow: hidden;
+	margin: -35px 0 0;
+	display: block;
+	background: url(../img/carousel/ad_ctr_1.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: all .3s ease;
+	border-radius: 35px;
+}
+
+.flex-direction-nav .flex-next {
+	background-position: 0 -70px;
+	right: 0;
+}
+
+.flex-direction-nav .flex-prev {
+	left: 0;
+}
+
+.flexslider:hover .flex-next {
+	opacity: 0.8;
+	filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-prev {
+	opacity: 0.8;
+	filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+	opacity: 1;
+	filter: alpha(opacity=50);
+}
+
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+
+.flex-control-nav li {
+	margin: 0 2px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.flex-control-paging li a {
+	background: url(../img/carousel/dot.png) no-repeat 0 -16px;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -50em;
+	width: 16px;
+	cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+	background-position: 0 0;
+}
+
+.flexslider .slides a img {
+	width: 100%;
+	height: 400px;
+	display: block;
+}
+
+.page{
+	margin-top: 5px;
+	margin-right: -40px;
+	width: 30%;
+	height: 40px;
+	float: right;
+	background-color: white;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	padding-left: 20px;
+}
+.pagebtn button{
+	margin-top: 5px;
+	font-size: 15px;
+	line-height: 20px;
+	border: 0.5px solid #999999;
+	background-color: #DFDFDF;
+	border-radius: 15px;
+	text-align: center;
+}
+button:hover{
+	background-color: white;
+}

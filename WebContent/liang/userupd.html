@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>修改</title>
+<link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../layer/theme/default/layer.css">
+<script type="text/javascript" src="../layer/layer.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<script src="../layui/layui.all.js"></script>
+<script src="../layer/mobile/layer.js"></script>
+</head>
+<body style="text-align:center;margin:0 auto;width:280px;height:150px;">
+<form>
+	密码：<input type="text" name="pwd"/><br>
+	性别：<input type="text" name="sex"/><br>
+	生日：<input type="text" name="bir"/><br>
+	电话：<input type="text" name="phone"/><br>
+	邮箱：<input type="text" name="email"/><br>
+	<input type="hidden" name="id"/>
+</form>
+<button id="btn">提交</button>
+<script type="text/javascript">
+	$(function(){
+		
+		$.get("userupd.php",function(data){
+			alert(data.cid);
+			$("#id").val(data.cid);
+		})
+		
+		$("button#btn").click(function(){
+			
+		})
+	})
+
+</script>
+</body>
+</html>

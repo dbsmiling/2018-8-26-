@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="js/order.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="iframe/css/head.css" />
+	<link rel="stylesheet" href="iframe/css/navigation.css" />
+	<link rel="stylesheet" href="css/shop_cart.css" />
+<meta charset="UTF-8">
+<title>Leaf-提交订单</title>
+</head>
+<body>
+	<header>
+		<div class="nav-l" style="margin-left:10%;">
+			<div style="margin-left:0;">
+				<div>
+					<a href="index.html" target="_blank">美丽家-魅力家-叶之家具</a>
+				</div>
+			</div>
+			<div>
+				<div>
+					<div>
+						<ul>
+							<li>
+								<a href="F" target="_blank">七夕系列饰品上线特惠</a>
+							</li>
+							<!--<li>
+								<a href="" target="_blank">【严选x中行联名卡】达标领80元礼品卡&gt;</a>
+							</li>
+							<li>
+								<a href="" target="_blank">【福利】下载严选APP，抢1元包邮团，领...</a>
+							</li>
+							<li>
+								<a  href="" target="_blank">七夕系列饰品上线特惠</a>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="nav-r"style="margin-right:10%;">
+				<div>
+						<div id="nar_lr" style="display: block;">
+							<div class="navr-lr">
+								<div>
+									<div id="login" class="" onclick="window.location='login.html'" title="leaf登录">登录</div>
+								</div>
+							</div>
+							<div class="navr-lr" style="margin-left:20px;">
+								<div >
+									<div onclick="window.location='regin.html'">注册</div>
+								</div>
+							</div>
+						</div>
+						<div id="user" style="display: none;">
+							<div onmouseout="yc()" onmouseover="xs()" style="">
+								<a href=""><div id="user_name" style="text-align: center;overflow: hidden;">123456</div></a>
+							</div>
+							<div id="service" onmouseout="yc()" onmouseover="xs()" class="navr-btn-tan">
+								<a href="Personal.html"><div style="border-bottom: 0.5px solid #999 ;">个人中心</div></a>
+								<a href="ShopCart.html"><div style="border-bottom: 0.5px solid #999 ;">购物车</div></a>
+								<a href="index.EXIT"><div id="exit">退出</div></a>
+							</div>
+						</div>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a href="Personal.html" target="_blank">我的订单</a>
+					</div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">会员</a></div>
+					<div class="navr-btn">|</div>
+					<div><a da target="_blank">甄选家居</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">企业采购</a></div>
+					<div class="navr-btn">|</div>
+					<div><a target="_blank">客服中心</a></div>
+		</div>
+	</header>
+	<section class="sec-nav">
+		<article class="sec-nav-art">
+			<section class="log"><img src="img/log.png" style="width: 240px;height: auto;"></section>
+			<div class="form">
+				<form action="" method="get">
+					<input type="text" id="search" class="search" />
+					<button></button>
+				</form>
+			</div>
+			<a href="ShopCart.html" target="_blank"><div class="cart-pic">
+					<div id="cart_num" class="cart-pic-num">0</div>
+				</div></a>
+		</article>
+	</section>
+	<div id="adress">
+		<div id="ty">
+		</div>
+	</div>
+	<div id="orderinfo"></div>
+	
+	<iframe class="ifr-two" src="iframe/foot.html" frameborder="0" scrolling="no"></iframe>
+</body>
+<script>
+		function xs(){
+			document.getElementById("service").style.display="block"
+		}
+		function yc(){
+			document.getElementById("service").style.display="none"
+		}
+		$(function(){
+				$.ajax({
+					type:"post",
+					url:"dl.dlning",
+					async:false,
+					dataType:'json',
+					success:function(data){
+						var obj=eval(data);
+						let state = obj.state;
+						if(state=="0000"){
+							let user=obj.user;
+							$("#nar_lr").css("display","none");
+							$("#user").css("display","block");
+							$("#user_name").html(user);
+						};
+						if(state=="0001"){
+							$("#nar_lr").css("display","block");
+							$("#user").css("display","none");
+							location.href="login.html";
+						};
+					}
+				});
+			$.ajax({
+				type:"get",
+				url:"engine/spcb.spcb",
+				async:false,
+				dataType:'json',
+				success:function(data){
+					var obj=eval(data);
+					let Cnum = obj.Cnum;
+					$("#cart_num").html(Cnum);
+				}
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>WYYX 管理界面</title>
+<script type="text/javascript" src="../js/jquery-3.3.1.js"></script>
+<link rel="stylesheet" href="../css/1.css">
+<link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../layer/theme/default/layer.css">
+<script type="text/javascript" src="../layer/layer.js"></script>
+<script src="../layui/layui.all.js"></script>
+<script src="../layer/mobile/layer.js"></script>
+</head>
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<div class="layui-header" style="background:white;box-shadow: 0px 2px 8px #888888;">
+			<div class="layui-logo">
+				<div class="layuiaa" ><a href="../liang/index.html"><img class="imggg"  src="../img/logo.png" /></a></div>
+				
+			</div>
+			<!-- 头部区域（可配合layui已有的水平导航） -->
+			<ul class="layui-nav layui-layout-left">
+				<li class="layui-nav-item"><a id="kongzhitai">控制台</a></li>
+				<li class="layui-nav-item"><a id="commoditymgr">商品管理</a></li>
+				<li class="layui-nav-item"><a id="usermanager">用户管理</a></li>
+				<li class="layui-nav-item"><a id="ordermanager">订单管理</a></li>
+				<li class="layui-nav-item"><a href="javascript:;">更多</a>
+					<dl class="layui-nav-child">
+						<dd>
+							<a href="">告辞</a>
+						</dd>
+					</dl></li>
+			</ul>
+			<ul class="layui-nav layui-layout-right">
+				<li class="layui-nav-item"><a href="javascript:;"> <img
+						src="http://ljxnb.xin/icon.ico" class="layui-nav-img"><span id="adminid">管理员</span>
+				</a> <!-- 
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+         -->
+					</dl></li>
+					<!-- href="http://192.168.10.49:8088/wu01" -->
+				<li id="exit" class="layui-nav-item"><a>退出</a></li>
+			</ul>
+		</div>
+
+		<div id="left-scroll" class="layui-side layui-bg-black">
+			<div class="layui-side-scroll" style="background: #165C47;">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed" id="allgoods"><a class="">所有商品</a>
+						<!--<dl class="layui-nav-child">
+            <dd><a href="javascript:;">列表一</a></dd>
+            <dd><a href="javascript:;">列表二</a></dd>
+            <dd><a href="javascript:;">列表三</a></dd>
+            <dd><a href="">超链接</a></dd>
+          </dl>--></li>
+					<li class="layui-nav-item layui-nav-itemed" id="issuegoods"><a class="">发布商品</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="layui-body"  style="background:#EEEEEE">
+			<!-- 内容主体区域 <div style="padding: 15px;">内容主体区域</div>-->
+			<iframe style="border:0" id="framepage1" src="Console.html"></iframe>
+			<iframe style="display: none;border:0;" id="framepage2" src="commodity.html"></iframe>
+			<iframe style="display: none;border:0;" id="framepage3" src="usermanage.html"></iframe>
+			<iframe style="display: none;border:0;" id="framepage4" src="order.html"></iframe>
+			<iframe style="display: none;border:0;" id="framepage5" src="commodity.html"></iframe>
+			<iframe style="display: none;border:0;" id="framepage6" src="commodityadd.html"></iframe>
+
+		</div>
+
+		<div class="layui-footer" style="background:white;">
+			<!-- 底部固定区域 -->
+			© 葉之 版权所有
+		</div>
+
+	</div>
+	<script src="../layui/layui.js"></script>
+	<script>
+//JavaScript代码区域
+layui.use('element', function(){
+  var element = layui.element;
+  
+});
+</script>
+<script type="text/javascript">
+//登陆查询数据
+$(function(){
+	$.get("a.adminlogin",function(data){
+		if(JSON.parse(data).code=="0001"){
+			location.href="/ThisLeaf/login.html";
+		}else{
+			$("#adminid").text(JSON.parse(data).code);
+		}
+	},false)
+	$("#exit").click(function(){
+		location.href="a.exitbackstage";
+	})
+})
+</script>
+<script language="javascript">
+window.onscroll =function (){
+	var scrollWidth=document.documentElement.scrollWidth||document.body.scrollWidth;
+	alert(scrollWidth);
+}
+
+$(function(){
+	//iframe 使用点击隐藏或者显示
+	$("#kongzhitai").click(function(){
+		$("iframe#framepage1").show();
+		$("iframe#framepage2").hide();
+		$("iframe#framepage3").hide();
+		$("iframe#framepage4").hide();
+		$("iframe#framepage5").hide();
+		$("iframe#framepage6").hide();
+	})
+	$("#commoditymgr").click(function(){
+		$("iframe#framepage1").hide();
+		$("iframe#framepage2").show();
+		$("iframe#framepage3").hide();
+		$("iframe#framepage4").hide();
+		$("iframe#framepage5").hide();
+		$("iframe#framepage6").hide();
+	})
+	$("#usermanager").click(function(){
+		$("iframe#framepage1").hide();
+		$("iframe#framepage2").hide();
+		$("iframe#framepage3").show();
+		$("iframe#framepage4").hide();
+		$("iframe#framepage5").hide();
+		$("iframe#framepage6").hide();
+	})
+	$("#ordermanager").click(function(){
+		$("iframe#framepage1").hide();
+		$("iframe#framepage2").hide();
+		$("iframe#framepage3").hide();
+		$("iframe#framepage4").show();
+		$("iframe#framepage5").hide();
+		$("iframe#framepage6").hide();
+	})
+	$("#allgoods").click(function(){
+		$("iframe#framepage1").hide();
+		$("iframe#framepage2").hide();
+		$("iframe#framepage3").hide();
+		$("iframe#framepage4").hide();
+		$("iframe#framepage5").show();
+		$("iframe#framepage6").hide();
+	})
+	$("#issuegoods").click(function(){
+		$("iframe#framepage1").hide();
+		$("iframe#framepage2").hide();
+		$("iframe#framepage3").hide();
+		$("iframe#framepage4").hide();
+		$("iframe#framepage5").hide();
+		$("iframe#framepage6").show();
+	})
+})
+
+</script>
+</body>
+</html>

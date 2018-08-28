@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+}
+iframe{
+	width: 100%;
+}
+.ifr-one{
+	height: 500px;
+}
+.ifr-two{
+	height: 205px;
+}
+section{
+	width: 100%;
+	height: 1000px;
+}
